@@ -1,0 +1,10 @@
+/* Load framework first, then Better Nexus overrides. */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import './frontend/theme.css';
+@import './frontend/services.css';
+@import './frontend/brand.css';
+@import './frontend/home.css';
+
+@import 'datatables.net-bs5/css/dataTables.bootstrap5.css';
+
+/* Apni existing custom CSS imports iske baad rakho. */

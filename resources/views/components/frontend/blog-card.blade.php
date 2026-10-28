@@ -1,0 +1,6 @@
+@props(['blog'])
+@once
+<link rel="stylesheet" href="{{ asset('better-nexus/blogs/read-more.css') }}?v=1">
+<script src="{{ asset('better-nexus/blogs/read-more.js') }}?v=1" defer></script>
+@endonce
+<article class="bn-journal-card"><a class="bn-journal-cover" href="{{ route('blogs.show',['slug'=>$blog->slug]) }}">@if($blog->image_url)<img src="{{ $blog->image_url }}" alt="{{ $blog->title }}" width="640" height="400" loading="lazy" decoding="async">@else<span class="bn-journal-placeholder">{{ site_setting('short_name') }}</span>@endif</a><div class="bn-journal-card-copy"><div class="bn-journal-meta"><span>{{ $blog->category ?: 'Insights' }}</span><time datetime="{{ $blog->published_at?->toIso8601String() }}">{{ $blog->published_at?->format('d M Y') }}</time></div><h3 class="bn-expand-title"><a href="{{ route('blogs.show',['slug'=>$blog->slug]) }}">{{ $blog->title }}</a></h3><button class="bn-title-more" type="button" aria-expanded="false" hidden>Read more</button><p>{{ \Illuminate\Support\Str::limit(\App\Support\BlogText::plain($blog->excerpt),130) }}</p><a class="bn-journal-read" href="{{ route('blogs.show',['slug'=>$blog->slug]) }}">Read blog <span aria-hidden="true">↗</span></a></div></article>

@@ -1,0 +1,16 @@
+/* Better Nexus official identity and editorial surfaces. */
+:root{--bn-primary:#126562;--bn-teal:#409f90;--bn-ink:#103b3c;--bn-line:#c5d7d0;--bn-soft:#e7efea;--bn8-navy:#071723}
+body{background:#e7efea}
+.bn8-brand{gap:9px;letter-spacing:normal;line-height:1;width:226px;max-width:100%}
+.bn8-brand img{display:block;object-fit:contain;flex-shrink:0;mix-blend-mode:multiply}
+.bn8-brand .bn8-brand-emblem{width:50px;height:50px}
+.bn8-brand .bn8-brand-wordmark{width:166px;height:auto}
+.bn2-header{background:#fbfcfa}.bn3-contact-bar{background:#e0ebe6;border-color:#cfddd6}
+.bn4-footer-identity .bn8-brand{width:254px;padding:14px;border-radius:18px;background:#fbfcfa;box-shadow:0 15px 35px #001e2026}
+.bn4-footer-identity .bn8-brand .bn8-brand-emblem{width:50px;height:50px}
+.bn4-footer-identity .bn8-brand .bn8-brand-wordmark{width:166px}
+.bn8-surface-0{background:#e0ece7}.bn8-surface-1{background:#f0eee5}.bn8-surface-2{background:#dae6e7}
+.bn2-page-hero{background:#e0ece7}.bn3-ambient{display:none}.bn3-locations{background:#dce8e6}
+.bn2-service-card{background:#f9faf5}.bn2-case-card{background:#f7f8f2}.bn2-ribbon{background:#d5e6de; padding: 10px 0 !important; font-size: 12px !important;}
+.bn5-benefits{background:#e0ece7}.bn3-location-grid>a{background:#eef3ed}.bn3-benefit-panel{background:#c9dfd3}
+.bn4-expertise{background:#ccdeda}.bn2-footer{background:#0c3438}.bn5-depth-stage{background:#0a282d}

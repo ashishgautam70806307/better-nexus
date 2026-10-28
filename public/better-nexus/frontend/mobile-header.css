@@ -1,0 +1,47 @@
+/* Scoped header repair. Existing desktop mega menu stays in place. */
+[data-bn-responsive-header] .bn-mobile-navigation{display:none}
+[data-bn-responsive-header] summary::-webkit-details-marker{display:none}
+[data-bn-responsive-header] .bn-mobile-toggle::marker,
+[data-bn-responsive-header] .bn-mobile-services>summary::marker{content:''}
+@media(max-width:1024px){
+    [data-bn-responsive-header]{--bn-mobile-header-height:72px;position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #dce9e3;overflow:visible}
+    [data-bn-responsive-header] .bn2-header-inner{height:var(--bn-mobile-header-height);min-height:var(--bn-mobile-header-height);width:calc(100% - 40px);max-width:none;margin-inline:auto;padding:0;gap:14px;display:flex;align-items:center;justify-content:space-between;position:static}
+    [data-bn-responsive-header] .bn2-nav,[data-bn-responsive-header] .bn2-header-action{display:none!important}
+    [data-bn-responsive-header] .bn8-brand{display:flex;align-items:center;gap:8px;width:auto;min-width:0;max-width:calc(100% - 58px);flex:0 1 auto;padding:0;line-height:1}
+    [data-bn-responsive-header] .bn8-brand .bn8-brand-emblem{width:39px;height:39px;object-fit:contain;flex:0 0 39px}
+    [data-bn-responsive-header] .bn8-brand .bn8-brand-wordmark{width:150px;max-width:calc(100% - 47px);height:auto;object-fit:contain;flex:0 1 auto}
+    [data-bn-responsive-header] .bn-mobile-navigation{display:block;position:static;flex:0 0 44px;margin:0;padding:0}
+    [data-bn-responsive-header] .bn-mobile-toggle{display:flex;align-items:center;justify-content:center;list-style:none;width:44px;height:44px;border:1px solid #d3e6de;border-radius:12px;background:#f0f7f3;color:#126562;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .2s,border-color .2s}
+    [data-bn-responsive-header] .bn-mobile-toggle:focus-visible,[data-bn-responsive-header] .bn-mobile-panel :focus-visible{outline:3px solid #319a85;outline-offset:3px}
+    [data-bn-responsive-header] .bn-mobile-toggle-lines{display:flex;flex-direction:column;gap:4px;width:19px}
+    [data-bn-responsive-header] .bn-mobile-toggle-lines>span{display:block;width:19px;height:2px;border-radius:3px;background:currentColor;transition:transform .2s,opacity .2s}
+    [data-bn-responsive-header] .bn-mobile-navigation[open]>.bn-mobile-toggle{background:#dfeee5;border-color:#adcdbf}
+    [data-bn-responsive-header] .bn-mobile-navigation[open] .bn-mobile-toggle-lines>span:first-child{transform:translateY(6px) rotate(45deg)}
+    [data-bn-responsive-header] .bn-mobile-navigation[open] .bn-mobile-toggle-lines>span:nth-child(2){opacity:0}
+    [data-bn-responsive-header] .bn-mobile-navigation[open] .bn-mobile-toggle-lines>span:last-child{transform:translateY(-6px) rotate(-45deg)}
+    [data-bn-responsive-header] .bn-mobile-panel{position:absolute;top:100%;left:0;right:0;width:auto;padding:18px 20px max(20px,env(safe-area-inset-bottom));margin:0;background:#fff;border-bottom:1px solid #c9dfd3;border-radius:0 0 18px 18px;box-shadow:0 20px 35px #0c42351a;max-height:calc(100vh - var(--bn-mobile-header-height) - 10px);max-height:calc(100dvh - var(--bn-mobile-header-height) - 10px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#abcdbd transparent;text-align:left;box-sizing:border-box}
+    [data-bn-responsive-header] .bn-mobile-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 10px 12px;border-bottom:1px solid #edf2ee;font-size:9px;font-weight:700;letter-spacing:.12em;color:#719486}
+    [data-bn-responsive-header] .bn-mobile-panel-dot{width:6px;height:6px;border-radius:50%;background:#65a78d}
+    [data-bn-responsive-header] .bn-mobile-link{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:49px;padding:12px 10px;margin:3px 0;border:0;border-radius:8px;color:#254e44;font-size:14px;line-height:1.5;font-weight:600;text-decoration:none;list-style:none;cursor:pointer;box-sizing:border-box}
+    [data-bn-responsive-header] .bn-mobile-link>span:last-child:not(:first-child){font-size:15px;color:#7c9c8d}
+    [data-bn-responsive-header] .bn-mobile-link:hover,[data-bn-responsive-header] .bn-mobile-link[aria-current=page],[data-bn-responsive-header] .bn-mobile-link.is-current{background:#edf6f0;color:#126562}
+    [data-bn-responsive-header] .bn-mobile-services{position:static;margin:0;padding:0}
+    [data-bn-responsive-header] .bn-mobile-services>summary svg{width:16px;height:16px;flex-shrink:0;transition:transform .2s}
+    [data-bn-responsive-header] .bn-mobile-services[open]>summary svg{transform:rotate(180deg)}
+    [data-bn-responsive-header] .bn-mobile-service-list{padding:5px 12px;margin:3px 4px 11px;border:1px solid #dcebe2;border-radius:11px;background:#f5faf6}
+    [data-bn-responsive-header] .bn-mobile-service-list>a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px;min-height:45px;border-bottom:1px solid #e0ede4;color:#4b7462;font-size:12px;line-height:1.5;text-decoration:none;font-weight:500;overflow-wrap:anywhere}
+    [data-bn-responsive-header] .bn-mobile-service-list>a:last-child{border-bottom:0}
+    [data-bn-responsive-header] .bn-mobile-service-list>a>span:last-child{flex-shrink:0;color:#7da08a}
+    [data-bn-responsive-header] .bn-mobile-service-list>a:hover,[data-bn-responsive-header] .bn-mobile-service-list>a[aria-current=page]{color:#126562;font-weight:700}
+    [data-bn-responsive-header] .bn-mobile-service-list>.bn-mobile-all-services{font-weight:700;color:#126562;font-size:12px}
+    [data-bn-responsive-header] .bn-mobile-cta{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#126562;color:#fff;padding:13px 17px;min-height:49px;border-radius:10px;margin:14px 4px 0;font-size:14px;font-weight:600;text-decoration:none;box-sizing:border-box}
+    [data-bn-responsive-header] .bn-mobile-cta:hover{background:#0c514d}
+}
+@media(max-width:480px){
+    [data-bn-responsive-header]{--bn-mobile-header-height:66px}
+    [data-bn-responsive-header] .bn2-header-inner{width:calc(100% - 32px);gap:12px}
+    [data-bn-responsive-header] .bn8-brand .bn8-brand-emblem{width:35px;height:35px;flex-basis:35px}
+    [data-bn-responsive-header] .bn8-brand .bn8-brand-wordmark{width:137px;max-width:calc(100% - 43px)}
+    [data-bn-responsive-header] .bn-mobile-panel{padding:15px 16px max(18px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){[data-bn-responsive-header] .bn-mobile-toggle,[data-bn-responsive-header] .bn-mobile-toggle-lines>span,[data-bn-responsive-header] .bn-mobile-services>summary svg{transition:none}}

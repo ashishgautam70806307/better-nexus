@@ -1,0 +1,13 @@
+@extends('layouts.admin-workspace')
+@section('title','Dashboard')
+@section('page-label','Dashboard')
+@section('workspace')
+
+<div class="mock-page-heading"><h1>Dashboard</h1><p>{{ now()->format('d F Y') }}</p></div>
+<div class="mock-metrics">@foreach([['Total Enquiries',$totalEnquiries,'mail','mint'],['New Enquiries',$newEnquiries,'grid','gold'],['Published Blogs',$published,'article','purple'],['Hero Images',$activeHeroImages,'layers','green']] as [$label,$value,$icon,$tone])<article class="mock-metric"><span class="mock-icon {{ $tone }}"><x-admin.icon :name="$icon" size="27"/></span><div><strong>{{ $value }}</strong><span>{{ $label }}</span></div></article>@endforeach</div>
+<div class="mock-dashboard-grid"><section class="mock-panel mock-enquiries"><div class="mock-panel-heading"><h2>Recent Enquiries</h2></div><div class="mock-table-wrap"><table><thead><tr><th>Name</th><th>Subject</th><th>Date</th><th>Status</th></tr></thead><tbody>
+@forelse($recentEnquiries as $enquiry)
+<tr><td><a href="{{ route('admin.enquiries.show',$enquiry) }}">{{ $enquiry->name }}</a></td><td>{{ \Illuminate\Support\Str::limit($enquiry->subject ?: 'General enquiry',35) }}</td><td>{{ $enquiry->created_at->format('d M Y') }}</td><td>{{ \App\Models\ContactEnquiry::STATUSES[$enquiry->status] ?? $enquiry->status }}</td></tr>
+@empty<tr><td colspan="4">No enquiries yet.</td></tr>@endforelse
+</tbody></table></div><p style="padding:12px 24px"><a href="{{ route('admin.enquiries.index') }}">Manage all enquiries →</a></p></section><div class="mock-right"><section class="mock-panel"><div class="mock-panel-heading"><h2>Content Overview</h2></div>@foreach($overview as [$label,$count,$icon,$percentage])<div class="mock-overview"><x-admin.icon :name="$icon" size="20"/><span>{{ $label }}</span><strong>{{ $count ?? '—' }}</strong><div class="mock-track"><i style="width:{{ $percentage }}%"></i></div></div>@endforeach</section><section class="mock-panel"><div class="mock-panel-heading"><h2>Recent Updates</h2></div>@forelse($recent as $blog)<div class="mock-update"><span class="mock-icon mint"><x-admin.icon name="article" size="20"/></span><div><strong>{{ $blog->is_published ? 'Blog updated' : 'Draft updated' }}</strong><small>{{ \Illuminate\Support\Str::limit($blog->title,55) }}</small></div><time>{{ $blog->updated_at->diffForHumans() }}</time></div>@empty<p class="mock-no-updates">No updates yet.</p>@endforelse</section></div></div>
+@endsection

@@ -1,0 +1,32 @@
+.bn-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: #fbfcfa;
+    border-bottom: 1px solid #c5d7d0;
+}
+
+.bn-header .navbar {
+    padding: 18px 0;
+}
+
+.bn-header .navbar-brand {
+    color: #126562;
+    letter-spacing: -0.5px;
+}
+
+.bn-header .nav-link {
+    color: #103b3c;
+    font-weight: 600;
+}
+
+.bn-header .nav-link:hover,
+.bn-header .nav-link.active {
+    color: #409f90;
+}
+
+@media (max-width: 991px) {
+    .bn-header .navbar-collapse {
+        padding-top: 16px;
+    }
+}

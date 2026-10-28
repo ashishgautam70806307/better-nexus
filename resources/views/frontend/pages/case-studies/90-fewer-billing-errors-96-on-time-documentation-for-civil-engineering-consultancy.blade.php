@@ -1,0 +1,86 @@
+@extends('layouts.frontend')
+@section('title', '90% Fewer Billing Errors & 96% On-Time Documentation for Civil Engineering Consultancy | Better Nexus')
+@section('description', 'Better Nexus connects your business with specialist remote support in administration, marketing, customer experience, design, technology, finance, and engineering.')
+@section('body-class', 'bn2-page-case-detail')
+
+@section('content')
+<section class="bn2-page-hero"><div class="bn3-ambient" aria-hidden="true"><i></i><i></i><i></i></div><div class="bn2-container bn2-split"><div class="bn2-hero-copy"><span class="bn2-eyebrow">Engineering Services</span><h1>90% Fewer Billing Errors &amp; 96% On-Time Documentation for Civil Engineering Consultancy</h1>
+<p>An Australia-based civil and structural engineering firm was struggling to keep up with backend operations. Billing errors, late submissions, and scattered documentation were slowing down projects and hurting their client relationships. They needed reliable support to manage vendors, streamline communications, and bring structure to their growing operations.</p>
+</div><div class="bn2-hero-photo"><img class="" src="{{ asset('better-nexus/assets/bn2/administration.jpg') }}" alt="Engineering Services illustration" width="1536" height="1024" loading="eager" decoding="async"><span class="bn2-photo-detail">Connected people.<br><strong>Better possibilities.</strong></span></div></div><div class="bn2-wave" aria-hidden="true"><svg viewbox="0 0 1440 100" preserveaspectratio="none"><path d="M0 30Q180 100 360 45T720 45T1080 45T1440 45V100H0Z"></path><path d="M0 55Q180 0 360 55T720 55T1080 55T1440 55V100H0Z"></path></svg></div></section>
+<section class="bn2-section bn8-surface-1"><div class="bn2-container bn2-case-layout"><article class="bn2-case-story"><div><h2><strong>End-to-End Project &amp; Vendor Management That Freed Engineers to Focus on Site Work</strong></h2>
+
+<div><strong>Client</strong></div>
+<div>Boutique civil &amp; structural engineering firm (Australia-based).</div>
+<div><strong>Challenges</strong></div>
+<ul>
+<li>
+<div>Needed support with vendor coordination, billing, and contractor follow-ups on multiple field projects</div>
+</li>
+<li>
+<div>Delayed documentation and technical report submissions affected client trust</div>
+</li>
+<li>
+<div>No system in place for tracking time, project milestones, or team billing</div>
+</li>
+<li>
+<div>Poor file format management led to issues in collaboration with external consultants</div>
+</li>
+</ul>
+
+<p><strong>Solution Provided</strong></p>
+
+<ul>
+<li>
+<div>Took over project tracking and time logging, using tools like ClickUp and Toggl</div>
+</li>
+<li>
+<div>Managed vendor and contractor communications, created standard billing templates, and followed up on due invoices</div>
+</li>
+<li>
+<div>Consolidated all project documentation and drawings, converting and formatting for compatibility (DWG to PDF, etc.)</div>
+</li>
+<li>
+<div>Drafted, proofread, and submitted technical reports on behalf of project managers</div>
+</li>
+<li>
+<div>Updated their website and social media with completed project case studies and team achievements</div>
+</li>
+</ul>
+
+<div><strong>Results</strong></div>
+<ul>
+<li>
+<div>Billing errors reduced by <strong>90%</strong>, and payments collected faster</div>
+</li>
+<li>
+<div>On-time project documentation increased from <strong>58% to 96%</strong></div>
+</li>
+<li>
+<div>Vendor response time improved, avoiding 2 major project delays</div>
+</li>
+<li>
+<div>Generated 3 new client leads from improved online presence</div>
+</li>
+<li>
+<div>Allowed engineers to focus on site work while VA team handled backend coordination</div>
+</li>
+</ul>
+
+<div><strong>With the backend now running smoothly, the firm experienced better client relationships, fewer disruptions, and a stronger online reputation—freeing their technical team to do what they do best: build and deliver.</strong></div>
+</div></article>
+<aside class="bn2-case-aside"><span class="bn2-eyebrow">A SIMILAR CHALLENGE?</span><h2>Let’s find<br><em>your way forward.</em></h2>
+<p>Tell us what needs to change. We’ll explore the support and specialist skills that fit.</p>
+<x-frontend.button :href="route('contact-us') . '#contact-form'" class="bn2-button">Talk to our team <span aria-hidden="true">↗</span></x-frontend.button><a class="bn2-text-link" href="{{ route('blogs.index') }}">← All case studies</a></aside></div></section>
+<section class="bn2-section bn2-soft bn8-surface-2"><div class="bn2-container"><div class="bn2-section-head"><div><span class="bn2-eyebrow">KEEP EXPLORING</span><h2>More work.<br><em>More perspectives.</em></h2>
+</div></div><div class="bn2-case-grid"><article class="bn2-case-card" data-category="Engineering Services"><a class="bn2-case-image" href="{{ route('blogs.show', ['slug' => '25-less-inventory-waste-80-manual-hours-saved-monthly-for-manufacturing-startup']) }}" aria-label="25% Less Inventory Waste &amp; 80+ Manual Hours Saved Monthly for Manufacturing Startup"><img class="" src="{{ asset('better-nexus/assets/bn2/software.jpg') }}" alt="Engineering Services project illustration" width="1536" height="1024" loading="lazy" decoding="async"></a><div class="bn2-case-body"><span class="bn2-pill">Engineering Services</span><h3><a href="{{ route('blogs.show', ['slug' => '25-less-inventory-waste-80-manual-hours-saved-monthly-for-manufacturing-startup']) }}">25% Less Inventory Waste &amp; 80+ Manual Hours Saved Monthly for Manufacturing Startup</a></h3>
+<p>A fast-growing European manufacturing tech startup lacked internal resources to handle data analytics and process automation. Inventory wastage, delayed vendor updates, and zero visibility into equipment performance were causing operational setbacks and inefficiencies across departments.</p>
+<a class="bn2-text-link" href="{{ route('blogs.show', ['slug' => '25-less-inventory-waste-80-manual-hours-saved-monthly-for-manufacturing-startup']) }}">Explore the story <span>↗</span></a></div></article>
+<article class="bn2-case-card" data-category="Engineering Services"><a class="bn2-case-image" href="{{ route('blogs.show', ['slug' => '40-faster-drafting-5-projects-delivered-ahead-of-schedule-for-architecture-firm']) }}" aria-label="40% Faster Drafting &amp; 5+ Projects Delivered Ahead of Schedule for Architecture Firm"><img class="" src="{{ asset('better-nexus/assets/bn2/engineering.jpg') }}" alt="Engineering Services project illustration" width="1536" height="1024" loading="lazy" decoding="async"></a><div class="bn2-case-body"><span class="bn2-pill">Engineering Services</span><h3><a href="{{ route('blogs.show', ['slug' => '40-faster-drafting-5-projects-delivered-ahead-of-schedule-for-architecture-firm']) }}">40% Faster Drafting &amp; 5+ Projects Delivered Ahead of Schedule for Architecture Firm</a></h3>
+<p>A US-based architecture and urban design firm with 20+ architects was overwhelmed by the burden of in-house BIM coordination, CAD drafting, and inconsistent file systems. Project delays and documentation issues were mounting, leaving senior architects with little time for creative work.</p>
+<a class="bn2-text-link" href="{{ route('blogs.show', ['slug' => '40-faster-drafting-5-projects-delivered-ahead-of-schedule-for-architecture-firm']) }}">Explore the story <span>↗</span></a></div></article>
+<article class="bn2-case-card" data-category="Finance &amp; Accounting"><a class="bn2-case-image" href="{{ route('blogs.show', ['slug' => '75000-donor-funding-secured-with-strategic-budgeting-for-a-non-profit']) }}" aria-label="$75,000 Donor Funding Secured with Strategic Budgeting for a Non-Profit"><img class="" src="{{ asset('better-nexus/assets/bn2/finance.jpg') }}" alt="Finance &amp; Accounting project illustration" width="1536" height="1024" loading="lazy" decoding="async"></a><div class="bn2-case-body"><span class="bn2-pill">Finance &amp; Accounting</span><h3><a href="{{ route('blogs.show', ['slug' => '75000-donor-funding-secured-with-strategic-budgeting-for-a-non-profit']) }}">$75,000 Donor Funding Secured with Strategic Budgeting for a Non-Profit</a></h3>
+<p>A Canada-based non-profit focused on youth empowerment was struggling with financial disorganization, delayed audits, and lack of transparency for its donors and board. Without a budgeting framework or centralized records, the organization risked losing funding opportunities and stakeholder confidence.</p>
+<a class="bn2-text-link" href="{{ route('blogs.show', ['slug' => '75000-donor-funding-secured-with-strategic-budgeting-for-a-non-profit']) }}">Explore the story <span>↗</span></a></div></article>
+</div></div></section>
+
+@endsection

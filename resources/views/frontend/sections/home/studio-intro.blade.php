@@ -1,0 +1,5 @@
+<section id="nx-intro" class="nx-section nx-intro"><div class="nx-wrap">
+<div class="nx-section-label"><span>01 / THE RIGHT CONNECTION</span><span>BETTER NEXUS</span></div>
+<div class="nx-intro-grid" data-nx-reveal><h1>Make room for<br>your <em>next big thing.</em></h1><div><p class="nx-lead">The right people.<br>A stronger business.</p><p>Turn everyday demands into meaningful progress. Better Nexus connects your business with the creative, technical and operational support to move forward with clarity.</p><a class="nx-btn" href="{{ route('contact-us') }}#contact-form">Let’s find your fit <span aria-hidden="true">↗</span></a></div></div>
+<div class="nx-principles"><span>Specialist skills</span><span>Clear communication</span><span>Support that adapts</span><a href="{{ route('about') }}">Meet your next partner ↗</a></div>
+</div></section>
