@@ -1,0 +1,39 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-CFqCqCX5.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "assets": [
+      "assets/manrope-400-BEIO-tX3.ttf",
+      "assets/manrope-500-C3q1kWH5.ttf",
+      "assets/manrope-600-DBphNC1-.ttf",
+      "assets/manrope-700-DbNN7f-K.ttf"
+    ]
+  },
+  "resources/fonts/manrope-400.ttf": {
+    "file": "assets/manrope-400-BEIO-tX3.ttf",
+    "src": "resources/fonts/manrope-400.ttf"
+  },
+  "resources/fonts/manrope-500.ttf": {
+    "file": "assets/manrope-500-C3q1kWH5.ttf",
+    "src": "resources/fonts/manrope-500.ttf"
+  },
+  "resources/fonts/manrope-600.ttf": {
+    "file": "assets/manrope-600-DBphNC1-.ttf",
+    "src": "resources/fonts/manrope-600.ttf"
+  },
+  "resources/fonts/manrope-700.ttf": {
+    "file": "assets/manrope-700-DbNN7f-K.ttf",
+    "src": "resources/fonts/manrope-700.ttf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-C85lA9bm.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
