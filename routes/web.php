@@ -46,9 +46,7 @@ Route::post('/admin/login', [AuthController::class, 'store'])
     ->name('admin.login.store');
 
 // PROTECTED ADMIN WORKSPACE
-Route::prefix('admin')
-    ->name('admin.')
-    ->middleware(['auth:web', 'auth.session', EnsureUserIsAdmin::class])
+Route::prefix('admin')->name('admin.')->middleware(['auth:web', 'auth.session', EnsureUserIsAdmin::class])
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::post('/logout', [AuthController::class, 'destroy'])->name('logout');

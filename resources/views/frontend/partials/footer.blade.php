@@ -1,7 +1,7 @@
 {{-- Footer styles are independent of the header and previous footer versions. --}}
-<link rel="stylesheet" href="{{ asset('better-nexus/footer/footer.css') }}?v=20261029approved">
+<link rel="stylesheet" href="{{ asset('better-nexus/footer/footer.css') }}?v=20261029menus">
 @php
-    $footerLogo = site_asset('footer_logo');
+    $footerLogo = site_asset('header_logo');
     $brandName = site_setting('website_name') ?: 'Better Nexus';
     $socialIcons = [
         'linkedin' => ['LinkedIn', '<path d="M6 9v10M6 5v.1M10 19V9h4v2c1-3 6-3 6 2v6M14 13v6"/>'],
@@ -22,9 +22,20 @@
                     @if($footerLogo)<img class="bn-mf-custom-logo" src="{{ $footerLogo }}" alt="{{ $brandName }}" width="320" height="90" loading="lazy">
                     @else<img class="bn-mf-emblem" src="{{ asset('better-nexus/footer/emblem.webp') }}" alt="" width="80" height="80" loading="lazy"><img class="bn-mf-wordmark" src="{{ asset('better-nexus/footer/wordmark.webp') }}" alt="{{ $brandName }} — Refined Remote Talent" width="235" height="50" loading="lazy">@endif
                 </a>
-                @if(count($footerSocials))<div class="bn-mf-socials bn-mf-socials-desktop" aria-label="Social links">@foreach($footerSocials as $key => [$label,$icon])<a href="{{ site_setting($key) }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $label }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{!! $icon !!}</svg></a>@endforeach</div>@endif
+                {{-- <p class="bn-mf-brand-description">We connect your business with skilled remote professionals.<br>Thoughtful support, built around the way you work.</p> --}}
+                @if(count($footerSocials))<div class="bn-mf-socials bn-mf-brand-socials" aria-label="Social links">@foreach($footerSocials as $key => [$label,$icon])<a href="{{ site_setting($key) }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $label }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{!! $icon !!}</svg></a>@endforeach</div>@endif
             </div>
-            <nav class="bn-mf-explore" aria-label="Footer navigation"><h2>Explore</h2><div class="bn-mf-nav-links"><a href="{{ route('home') }}">Home</a><a href="{{ route('about') }}">About us</a><a href="{{ route('services.index') }}">Services</a><a href="{{ route('blogs.index') }}">Blogs</a><a href="{{ route('contact-us') }}">Contact us</a></div></nav>
+            <nav class="bn-mf-explore" aria-label="Footer navigation"><h2>Explore</h2><div class="bn-mf-nav-links">
+                @foreach([
+                    ['home','Home','M3 10l9-7 9 7M5 9v12h5v-7h4v7h5V9'],
+                    ['about','About us','M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M16 3a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-3.87'],
+                    ['services.index','Services','M4 7h16v14H4ZM8 7V3h8v4M4 12h16M10 12v3h4v-3'],
+                    ['blogs.index','Blogs','M5 3h11l3 3v15H5ZM15 3v5h4M8 12h8M8 16h6'],
+                    ['contact-us','Contact us','M3 4h18v13H8l-5 4ZM7 8h10M7 12h7']
+                ] as [$route,$label,$path])
+                <a href="{{ route($route) }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ $path }}"/>@if($route === 'about')<circle cx="9" cy="7" r="4"/>@endif</svg><span>{{ $label }}</span></a>
+                @endforeach
+            </div></nav>
             <div class="bn-mf-contact"><h2>Get in touch</h2>
                 @if(site_setting('contact_email'))<div class="bn-mf-contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 5 9 7 9-7"/></svg><a href="mailto:{{ site_setting('contact_email') }}">{{ site_setting('contact_email') }}</a></div>@endif
                 @if(site_setting('phone_primary') || site_setting('phone_secondary'))<div class="bn-mf-contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="m7 3 3 5-3 3c1.7 3 3 4.3 6 6l3-3 5 3-1 4C10 22 2 14 3 4Z"/></svg><div>@foreach(['phone_primary','phone_secondary'] as $key)@if(site_setting($key))<a href="tel:{{ preg_replace('/[^0-9+]/', '', site_setting($key)) }}">{{ site_setting($key) }}</a>@endif @endforeach</div></div>@endif
@@ -32,7 +43,7 @@
             </div>
         </div>
         <div class="bn-mf-bottom">
-            @if(count($footerSocials))<div class="bn-mf-socials bn-mf-socials-mobile" aria-label="Social links">@foreach($footerSocials as $key => [$label,$icon])<a href="{{ site_setting($key) }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $label }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{!! $icon !!}</svg></a>@endforeach</div>@endif
+
             <p>© {{ date('Y') }} {{ site_setting('copyright_text') ?: $brandName . '. All rights reserved.' }}</p><a class="bn-mf-top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
         </div>
     </div>

@@ -39,7 +39,7 @@ body.bn-admin{font-family:Inter,Arial,sans-serif;color:#122340;background:#f4f8f
 body.bn-admin{--admin-ink:#173d36;--admin-muted:#71867e;--admin-accent:#126562;--admin-hover:#eaf5ef;font-size:13px}
 body.bn-admin .bn-admin-topbar{height:64px!important;min-height:64px!important;padding:10px 22px!important}
 body.bn-admin .bn-admin-sidebar-brand{height:64px!important;padding:13px 16px!important}
-body.bn-admin .bn-admin-sidebar-brand>img:first-child{width:34px!important;height:34px!important}
+body.bn-admin .bn-admin-sidebar-brand>img:first-child{width:186px!important;height:57px!important}
 body.bn-admin .mock-wordmark{width:155px!important}
 body.bn-admin .mock-header-title{font-size:17px!important;letter-spacing:-.025em}
 body.bn-admin .bn-admin-icon-button{width:36px;height:36px;border-radius:8px}
