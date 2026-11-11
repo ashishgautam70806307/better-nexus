@@ -224,7 +224,20 @@ class HomeHeroController extends Controller
             throw $e;
         }
         $this->removeVideoUpload($old);
-        return back()->with('success', ucfirst($device).($publishNow ? ' video uploaded and published. Refresh the homepage to view it.' : ' video uploaded as draft. Preview, then publish.'));
+        $message = ucfirst($device).($publishNow ? ' video uploaded and published.' : ' video uploaded as draft.');
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => $message,
+                'device' => $device,
+                'published' => $publishNow,
+                'active' => (bool) $this->hero()->is_active,
+                'preview_url' => route('admin.hero-video.preview', [
+                    'device' => $device,
+                    'v' => pathinfo($path, PATHINFO_FILENAME),
+                ]),
+            ]);
+        }
+        return back()->with('success', $message);
     }
 
     public function publishVideos(Request $request)
@@ -251,6 +264,15 @@ class HomeHeroController extends Controller
                 'show_video'=>false,
             ]);
         });
+        if ($request->expectsJson()) {
+            $hero = $this->hero()->fresh();
+            return response()->json([
+                'message' => 'Hero publication settings saved.',
+                'active' => (bool) $hero->is_active,
+                'desktop_published' => (bool) $hero->desktop_video_published,
+                'mobile_published' => (bool) $hero->mobile_video_published,
+            ]);
+        }
         return back()->with('success', 'Hero publication settings saved.');
     }
 

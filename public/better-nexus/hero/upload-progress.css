@@ -1,0 +1,18 @@
+/* Hero video studio: isolated admin upload feedback */
+.bha-upload-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.bha-save-draft{background:#e8f0f0!important;color:#114a49!important}
+.bha-upload-progress{margin:14px 0 8px;padding:14px;border:1px solid #cfe1da;border-radius:12px;background:#f4faf7}
+.bha-upload-progress[hidden],.bha-live-notice[hidden]{display:none!important}
+.bha-progress-top{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#13564d}
+.bha-progress-top span{font-variant-numeric:tabular-nums;font-weight:750}
+.bha-upload-progress progress{display:block;width:100%;height:13px;margin:10px 0;accent-color:#17776b}
+.bha-upload-progress p{font-size:12px;color:#55756d;margin:5px 0 10px}
+.bha-upload-cancel{border:1px solid #b5cdc4;border-radius:8px;background:#fff;color:#174c47;padding:7px 12px;cursor:pointer}
+.bha-upload-cancel:disabled{opacity:.5;cursor:not-allowed}
+.bha-form-feedback{font-size:12px;margin:10px 0 0;line-height:1.5;color:#146f55}
+.bha-form-feedback.is-error,.bha-live-notice.is-error{color:#a32828;background:#fff2f1}
+.bha-live-notice{border:1px solid #bddccc;background:#f0faf5;color:#13563c;border-radius:12px;padding:13px 16px;margin-bottom:14px;font-size:13px}
+.bha-upload-removal-hint{font-size:11px;color:#6b7974;margin-top:10px}
+.bha-video-form button:disabled,.bha-publish button:disabled{opacity:.6;cursor:progress}
+@media(max-width:520px){.bha-upload-actions{flex-direction:column}.bha-upload-actions button{width:100%}.bha-upload-progress{padding:11px}}
+@media(prefers-reduced-motion:reduce){.bha-upload-progress *{animation:none!important;transition:none!important}}
