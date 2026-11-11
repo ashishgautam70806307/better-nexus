@@ -10,18 +10,20 @@ class ServiceController extends Controller
     public function index(): View
     {
         return view('frontend.pages.services', [
-            'services' => config('frontend.services', []),
+            'services' => config('virtual-assistant', []),
         ]);
     }
 
     public function show(string $slug): View
     {
-        // Replace this catalog lookup with a published Eloquent query later.
-        $catalog = config('frontend.services', []);
+        // Public slugs stay compatible with existing bookmarks.
+        $catalog = config('virtual-assistant', []);
         abort_unless(array_key_exists($slug, $catalog), 404);
         $service = $catalog[$slug];
 
-        // The view is a trusted catalog value, never the URL supplied by a visitor.
-        return view($service['view'], ['service' => $service, 'slug' => $slug]);
+        $others = array_filter($catalog, fn ($item, $key) => $key !== $slug, ARRAY_FILTER_USE_BOTH);
+        $relatedServices = array_slice($others, 0, 3, true);
+
+        return view('frontend.pages.service-detail', compact('service', 'slug', 'relatedServices'));
     }
 }

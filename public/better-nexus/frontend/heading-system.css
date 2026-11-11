@@ -1,0 +1,5 @@
+/* One unified responsive type scale for all public landing pages, intentionally max 2.4vw at >= 1024px. */
+@media (min-width:1024px){#main :is(h1,h2){font-size:2.4vw!important;line-height:1.17!important;letter-spacing:-.035em!important}#main .bn-home26 :is(h1,h2){font-size:2.4vw!important}} 
+@media (min-width:641px) and (max-width:1023px){#main :is(h1,h2){font-size:clamp(1.65rem,3.1vw,2.35rem)!important;line-height:1.17!important}}
+@media (max-width:640px){#main :is(h1,h2){font-size:clamp(1.35rem,5.5vw,1.85rem)!important;line-height:1.2!important;letter-spacing:-.03em!important}}
+#main :is(h1,h2){overflow-wrap:break-word;text-wrap:balance}#main :is(h3){overflow-wrap:break-word}

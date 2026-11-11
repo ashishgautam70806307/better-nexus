@@ -1,0 +1,21 @@
+/* Phase 3: strictly service-page scoped polish, no header/hero/global overrides. */
+#main .bn-phase-two-detail .bn-experience-detail-photo,
+#main .bn-services-v2 .bn-sv-hero-photo {overflow:hidden}
+#main .bn-phase-two-detail .bn-experience-detail-photo img {display:block;width:100%;height:100%;min-height:280px;object-fit:cover;object-position:center;transition:transform .5s ease}
+#main .bn-phase-two-detail .bn-experience-detail-photo:hover img {transform:scale(1.035)}
+#main .bn-phase-two-detail .bn-experience-detail-tasks .bn-experience-task-grid {align-items:stretch}
+#main .bn-phase-two-detail .bn-experience-task-grid > li {min-width:0;height:100%;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+#main .bn-phase-two-detail .bn-experience-task-grid > li:hover {transform:translateY(-4px);box-shadow:0 16px 35px rgba(5,50,43,.14);border-color:#94cfc1}
+#main .bn-phase-two-detail .bn-p2-benefit {height:100%}
+#main .bn-phase-two-detail .bn-p2-story-photo img{object-position:center;max-width:100%}
+#main .bn-phase-two-detail .bn-p3-text-only-grid {display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:15px!important}
+#main .bn-phase-two-detail .bn-p3-text-only-card {display:flex!important;min-width:0;min-height:160px;align-items:stretch;border:1px solid #d8e8e1!important;border-radius:18px!important;background:#fff!important;box-shadow:0 8px 24px rgba(6,51,42,.07)!important;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+#main .bn-phase-two-detail .bn-p3-text-only-card:hover {transform:translateY(-5px);border-color:#9cd1c0!important;box-shadow:0 18px 34px rgba(6,51,42,.15)!important}
+#main .bn-phase-two-detail .bn-p3-text-only-card .bn-experience-service-body{display:flex;flex-direction:column;justify-content:space-between;width:100%;padding:22px!important}
+#main .bn-phase-two-detail .bn-p3-text-only-card .bn-experience-service-link{margin-top:14px}
+#main .bn-phase-two-detail .bn-p3-text-only-card h3{overflow-wrap:anywhere;font-size:clamp(1rem,1.1vw,1.15rem)!important;line-height:1.35}
+#main .bn-phase-two-detail .bn-p3-text-only-card p{color:#516d67;font-size:.92rem;line-height:1.55}
+#main .bn-phase-two-detail .bn-experience-detail-copy h1 {overflow-wrap:normal;hyphens:none}
+@media(max-width:980px){#main .bn-phase-two-detail .bn-p3-text-only-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){#main .bn-phase-two-detail .bn-p3-text-only-grid{grid-template-columns:1fr!important}#main .bn-phase-two-detail .bn-p3-text-only-card{min-height:140px}#main .bn-phase-two-detail .bn-experience-detail-photo img{min-height:225px}#main .bn-phase-two-detail .bn-p3-text-only-card .bn-experience-service-body{padding:18px!important}}
+@media(prefers-reduced-motion:reduce){#main .bn-phase-two-detail .bn-p3-text-only-card,#main .bn-phase-two-detail .bn-experience-detail-photo img,#main .bn-phase-two-detail .bn-experience-task-grid >li{transition:none!important;transform:none!important}}

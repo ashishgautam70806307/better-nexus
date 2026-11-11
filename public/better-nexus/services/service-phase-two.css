@@ -1,0 +1,44 @@
+/* Better Nexus Phase 2: only existing six service detail pages. Header and homepage untouched. */
+#main .bn-phase-two-detail{--p2-ink:#123d3a;--p2-muted:#4c6963;--p2-line:#d7e7df}
+#main .bn-phase-two-detail .bn-experience-detail-copy h1,#main .bn-phase-two-detail .bn-p2-story h2,#main .bn-phase-two-detail .bn-p2-head h2,#main .bn-phase-two-detail .bn-p2-process h2,#main .bn-phase-two-detail .bn-p2-faq h2{font-size:min(2.4vw,38px)!important;line-height:1.18;letter-spacing:-.03em}
+#main .bn-p2-story{background:#f5faf8;padding-block:clamp(46px,5.6vw,84px)}
+#main .bn-p2-story-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(26px,5vw,76px);align-items:center}
+#main .bn-p2-story-photo{margin:0;overflow:hidden;border-radius:24px;aspect-ratio:1.5;box-shadow:0 22px 48px #0b53411a}
+#main .bn-p2-story-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+#main .bn-p2-story-photo:hover img{transform:scale(1.04)}
+#main .bn-p2-story-copy{min-width:0}
+#main .bn-p2-story-copy h2{color:var(--p2-ink);max-width:26ch;margin:14px 0 16px}
+#main .bn-p2-story-copy p{color:var(--p2-muted);line-height:1.8;margin:0 0 18px;max-width:56ch}
+#main .bn-p2-text-link{font-weight:700;color:#087265;text-decoration:none}
+#main .bn-p2-text-link:hover{text-decoration:underline}
+#main .bn-p2-benefits{background:#fff;padding-block:clamp(48px,5vw,80px)}
+#main .bn-p2-head{margin-bottom:26px}
+#main .bn-p2-head h2{color:var(--p2-ink);margin:12px 0 0}
+#main .bn-p2-benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+#main .bn-p2-benefit{background:linear-gradient(145deg,#f8fcfa,#edf7f3);border:1px solid var(--p2-line);border-radius:20px;padding:22px;min-width:0;box-shadow:0 8px 26px #0b44320a;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+#main .bn-p2-benefit:hover{transform:translateY(-5px);box-shadow:0 20px 40px #073d3125;border-color:#92cfc1}
+#main .bn-p2-number{color:#087c6f;font-weight:800;letter-spacing:.14em;font-size:.75rem}
+#main .bn-p2-benefit h3{font-size:1.1rem;line-height:1.35;margin:18px 0 9px;color:var(--p2-ink)}
+#main .bn-p2-benefit p{margin:0;color:var(--p2-muted);font-size:.94rem;line-height:1.7}
+#main .bn-p2-process{background:#0c383a;color:#fff;padding-block:clamp(48px,5vw,82px)}
+#main .bn-p2-process-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(25px,6vw,85px)}
+#main .bn-p2-process-intro h2{color:#fff;margin:15px 0;max-width:23ch}
+#main .bn-p2-process-intro p{max-width:43ch;color:#c2dfd8;line-height:1.75}
+#main .bn-p2-steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+#main .bn-p2-steps li{display:flex;align-items:flex-start;gap:19px;padding:18px 21px;background:#ffffff0c;border:1px solid #ffffff28;border-radius:15px;transition:background .25s ease,transform .25s ease}
+#main .bn-p2-steps li:hover{background:#ffffff19;transform:translateX(4px)}
+#main .bn-p2-steps li>span{font-size:.8rem;font-weight:800;color:#92e3ce;letter-spacing:.08em;margin-top:3px}
+#main .bn-p2-steps h3{font-size:1.03rem;color:#fff;margin:0 0 6px}
+#main .bn-p2-steps p{font-size:.92rem;line-height:1.66;color:#d2e5df;margin:0}
+#main .bn-p2-faq{background:#f6faf8;padding-block:clamp(48px,5vw,80px)}
+#main .bn-p2-faq-layout{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(22px,5vw,65px)}
+#main .bn-p2-faq h2{margin:14px 0;color:var(--p2-ink)}
+#main .bn-p2-faq-items{display:grid;gap:12px}
+#main .bn-p2-faq-items details{background:#fff;border:1px solid var(--p2-line);border-radius:14px;overflow:hidden}
+#main .bn-p2-faq-items summary{cursor:pointer;font-weight:700;color:var(--p2-ink);padding:17px 20px;line-height:1.45;list-style-position:inside}
+#main .bn-p2-faq-items summary:focus-visible{outline:3px solid #4dbba3;outline-offset:-3px}
+#main .bn-p2-faq-items details[open]{border-color:#8fc8b9}
+#main .bn-p2-faq-items details p{color:var(--p2-muted);line-height:1.72;margin:0;padding:0 20px 19px}
+@media(max-width:900px){#main .bn-p2-story-grid,#main .bn-p2-process-layout,#main .bn-p2-faq-layout{grid-template-columns:1fr}#main .bn-p2-benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){#main .bn-phase-two-detail .bn-experience-detail-copy h1,#main .bn-phase-two-detail .bn-p2-story h2,#main .bn-phase-two-detail .bn-p2-head h2,#main .bn-phase-two-detail .bn-p2-process h2,#main .bn-phase-two-detail .bn-p2-faq h2{font-size:clamp(1.35rem,3.9vw,1.9rem)!important}#main .bn-p2-benefits-grid{grid-template-columns:1fr}#main .bn-p2-story-photo{aspect-ratio:1.65}}
+@media(prefers-reduced-motion:reduce){#main .bn-p2-story-photo img,#main .bn-p2-benefit,#main .bn-p2-steps li{transition:none!important;transform:none!important}}

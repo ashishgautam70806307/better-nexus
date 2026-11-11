@@ -30,3 +30,31 @@
         padding:100px 0 0;
     }
 }
+
+/* Compact brand lockup with a readable surface for the dark logo. */
+.bn-mock-footer#bn-approved-footer{
+  background:radial-gradient(ellipse at 12% 28%,#12615e 0%,transparent 55%),#082f3e;
+  padding-top:clamp(47px,6vw,79px);
+}
+.bn-mock-footer .bn-mf-waves{height:clamp(41px,5vw,65px)}
+.bn-mock-footer .bn-mf-grid{padding-block:18px 24px}
+.bn-mock-footer#bn-approved-footer .bn-mf-logo{
+  display:inline-flex!important;width:max-content;max-width:100%;min-height:0;
+  padding:9px 14px;background:#fcfdfb;border-radius:12px;box-shadow:none;
+}
+.bn-mock-footer#bn-approved-footer .bn-mf-custom-logo{
+  display:block;width:clamp(126px,14vw,174px)!important;
+  height:clamp(68px,8vw,102px)!important;max-width:100%;object-fit:contain!important;
+}
+.bn-mock-footer .bn-mf-brand-description{max-width:29ch;margin:12px 0 15px!important}
+.bn-mock-footer .bn-mf-brand-socials{flex-wrap:wrap!important}
+.bn-mock-footer .bn-mf-nav-links a{white-space:normal}
+.bn-mock-footer .bn-mf-nav-links a>svg{flex-shrink:0}
+@media(max-width:800px){
+  .bn-mock-footer .bn-mf-grid{gap:20px}
+  .bn-mock-footer .bn-mf-bottom{padding-block:14px}
+}
+@media(max-width:360px){
+  .bn-mock-footer .bn-mf-grid{grid-template-columns:minmax(0,1fr)}
+  .bn-mock-footer .bn-mf-contact{border-left:0;padding-left:0}
+}

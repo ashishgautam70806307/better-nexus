@@ -1,0 +1,8 @@
+/* Only homepage sections directly below the video. */
+#main .bn-home-followup{padding-block:clamp(32px,4.2vw,60px)}
+#main .bn-home-followup .va-wrap>p{max-width:70ch}
+#main .bn-home-connection{padding-block:clamp(42px,5vw,72px)}
+#main .bn-home-connection .va-split{align-items:center}
+#main .bn-home-connection .va-split>div{min-width:0}
+#main .bn-home-connection .va-art{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}
+@media(max-width:650px){#main .bn-home-connection .va-split{grid-template-columns:minmax(0,1fr)}#main .bn-home-followup{padding-block:32px}}

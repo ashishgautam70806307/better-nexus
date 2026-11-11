@@ -1,0 +1,49 @@
+/* Better Nexus content-only refinement. Intentionally no selectors for header, navbar, footer or video. */
+#main .bn-home-followup {padding-block:clamp(30px,4.2vw,58px)!important;background:linear-gradient(118deg,#f8fcfa 0%,#edf7f3 75%,#e4f3ed 100%)!important;border-bottom:1px solid #e0ede7}
+#main .bn-home-followup .bn-intro-premium {display:grid!important;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr)!important;align-items:center;gap:clamp(28px,4vw,65px)!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:clamp(10px,1.2vw,18px) 0!important;max-width:1400px}
+#main .bn-home-followup .bn-intro-copy {min-width:0;position:relative}
+#main .bn-home-followup .bn-intro-copy .va-kicker {font-size:.73rem;letter-spacing:.18em;font-weight:800;color:#12786a}
+#main .bn-home-followup #bn-home-intro-title {font-size:2.4vw!important;max-font-size:none;line-height:1.18!important;letter-spacing:-.035em!important;font-weight:780!important;color:#103d3b!important;margin:12px 0 16px!important;text-wrap:nowrap!important;overflow-wrap:normal!important;white-space:nowrap!important}
+#main .bn-intro-rule {display:block;width:clamp(55px,6vw,88px);height:4px;border-radius:6px;background:linear-gradient(90deg,#08796c,#9bd9c8)}
+#main .bn-home-followup .bn-intro-description {min-width:0;border-left:2px solid #cce5db!important;padding:5px 0 5px clamp(20px,2.6vw,40px)!important}
+#main .bn-home-followup .bn-intro-description p {margin:0 0 17px!important;max-width:60ch;font-size:clamp(.95rem,1.08vw,1.06rem)!important;line-height:1.65!important;color:#4a6962}
+#main .bn-home-followup .va-home-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px}
+#main .bn-home-followup .va-button{padding:11px 17px!important;font-size:.87rem!important;border-radius:11px}
+#main .bn-home-followup .va-card-link{font-size:.9rem!important;font-weight:700;text-decoration:none}
+/* Headings: intentional BR is removed from the services headline; adequate desktop width and soft responsive scaling. */
+@media(min-width:1100px){
+ #main .bn-experience-catalog .va-wrap > h2 {max-width:none!important;white-space:nowrap;text-wrap:nowrap;overflow-wrap:normal!important;font-size:min(2.4vw,36px)!important;letter-spacing:-.035em}
+ #main .bn-how-intro {max-width:1050px!important}
+ #main .bn-how-intro h2 {white-space:nowrap;text-wrap:nowrap;overflow-wrap:normal!important;font-size:min(2.4vw,36px)!important}
+ #main .bn-home-connection h2{font-size:min(2.4vw,36px)!important}
+}
+/* Ensure all major sections share a consistent responsive heading scale. No typography styles leak outside main. */
+@media (min-width:1024px){#main :is(.bn-home-followup,.bn-home-connection,.bn-how-section,.bn-experience-catalog,#va-blogs,#va-questions) :is(h1,h2){font-size:min(2.4vw,36px)!important}}
+@media(max-width:1099px){
+ #main .bn-home-followup .bn-intro-premium{grid-template-columns:1fr!important;gap:20px!important}
+ #main .bn-home-followup #bn-home-intro-title{font-size:clamp(1.55rem,3.15vw,2.4rem)!important;white-space:normal!important;text-wrap:pretty!important}
+ #main .bn-home-followup .bn-intro-description{border-left:0!important;border-top:1px solid #d4e8df;padding:18px 0 0!important}
+ #main .bn-experience-catalog .va-wrap > h2,#main .bn-how-intro h2{max-width:100%!important;white-space:normal;overflow-wrap:normal!important;text-wrap:pretty!important}
+}
+@media(max-width:700px){
+ #main .bn-home-followup{padding-block:24px!important}
+ #main .bn-home-followup .bn-intro-premium{gap:14px!important;padding:10px 0!important}
+ #main .bn-home-followup #bn-home-intro-title{font-size:clamp(1.38rem,5.3vw,1.85rem)!important;margin:9px 0 12px!important}
+ #main .bn-home-followup .bn-intro-description{padding-top:14px!important}
+ #main .bn-home-followup .bn-intro-description p{font-size:.94rem!important}
+ #main .bn-home-followup .va-home-actions{gap:12px}
+ #main :is(.bn-home-connection,.bn-how-section,.bn-experience-catalog,#va-blogs,#va-questions) :is(h1,h2){font-size:clamp(1.35rem,5.3vw,1.85rem)!important}
+}
+/* AOS fallback: no content disappears if JS doesn't load. Activated only after observers attach. */
+@media(prefers-reduced-motion:no-preference){
+ html.bn-final-aos #main [data-aos]:not(.aos-init):not(.bn-aos-visible):not(.bn-final-visible) {opacity:0!important;will-change:transform,opacity}
+ html.bn-final-aos #main [data-aos="fade-left"]:not(.aos-init):not(.bn-final-visible){transform:translate3d(24px,0,0)}
+ html.bn-final-aos #main [data-aos="fade-right"]:not(.aos-init):not(.bn-final-visible){transform:translate3d(-24px,0,0)}
+ html.bn-final-aos #main [data-aos="fade-up"]:not(.aos-init):not(.bn-final-visible){transform:translate3d(0,22px,0)}
+ html.bn-final-aos #main [data-aos="zoom-in"]:not(.aos-init):not(.bn-final-visible){transform:scale(.97)}
+ html.bn-final-aos #main [data-aos].bn-final-visible:not(.aos-init){opacity:1!important;transform:none!important}
+ html.bn-final-aos #main [data-aos]:not(.aos-init){transition:opacity .65s ease,transform .65s cubic-bezier(.21,.78,.21,1);transition-delay:var(--bn-final-delay,0ms)}
+}
+/* Existing home-specific animation script must not override the single AOS source of truth. */
+#main.bn-home-motion-ready [data-aos],html.bn-experience-motion #main [data-aos].bn-reveal{will-change:auto}
+@media(prefers-reduced-motion:reduce){#main [data-aos]{opacity:1!important;transform:none!important;transition:none!important}}

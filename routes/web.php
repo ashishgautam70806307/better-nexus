@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 // PUBLIC WEBSITE
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/media/home-hero/{device}', [HomeController::class, 'video'])->whereIn('device', ['desktop', 'mobile'])->name('home.hero-video');
+Route::get('/media/home-hero', [HomeController::class, 'video'])->defaults('device', 'desktop')->name('home.hero-video-legacy');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us');
@@ -61,12 +63,22 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:web', 'auth.session', 
 
         Route::get('/hero-banners', [HomeHeroController::class, 'edit'])
             ->name('hero-banners.index');
+        /* Archived hero copy update.
         Route::put('/hero-banners', [HomeHeroController::class, 'update'])
             ->name('hero-banners.update');
+        */
+        Route::put('/hero-banners/video', [HomeHeroController::class, 'updateVideo'])
+            ->middleware('throttle:6,1')->name('hero-video.update');
+        Route::put('/hero-banners/video/publish', [HomeHeroController::class, 'publishVideos'])->name('hero-video.publish');
+        Route::get('/hero-banners/video/preview/{device}', [HomeHeroController::class, 'previewVideo'])->whereIn('device', ['desktop','mobile'])->name('hero-video.preview');
+        Route::delete('/hero-banners/video', [HomeHeroController::class, 'destroyVideo'])
+            ->middleware('throttle:6,1')->name('hero-video.destroy');
+        /* Archived image gallery routes.
         Route::put('/hero-images/{image}', [HomeHeroController::class, 'updateImage'])
             ->name('hero-images.update');
         Route::delete('/hero-images/{image}', [HomeHeroController::class, 'destroyImage'])
             ->name('hero-images.destroy');
+        */
 
         Route::get('/settings', [WebsiteSettingController::class, 'edit'])
             ->name('settings.edit');

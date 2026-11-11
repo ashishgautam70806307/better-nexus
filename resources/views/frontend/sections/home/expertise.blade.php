@@ -8,7 +8,6 @@
 ['creative-services','Creative & design','Give your ideas a distinctive identity.'],
 ['software-and-app-development','Software & apps','Digital tools built around your work.'],
 ['finance-and-accounting','Finance & accounting','Keep the numbers moving with clarity.'],
-['engineering-services','Engineering support','Technical expertise for your next project.']
 ] as [$slug,$label,$description])
 <a href="{{ route('services.show',['slug'=>$slug]) }}"><span class="bn-expertise-number">0{{ $loop->iteration }}</span><div><h3>{{ $label }}</h3><p>{{ $description }}</p></div><span class="bn-expertise-arrow" aria-hidden="true">↗</span></a>
 @endforeach

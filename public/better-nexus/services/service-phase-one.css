@@ -1,0 +1,55 @@
+/* Phase 1: Services listing + administrative detail only; never targets header/nav. */
+#main .bn-services-v2,#main .bn-admin-detail-v2{--bn-sv-teal:#0b5d56;--bn-sv-ink:#113d3c}
+#main .bn-services-v2 .bn-sv-hero{background:#f3faf7;padding:clamp(55px,6vw,92px) 0}
+#main .bn-sv-hero-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.96fr);gap:clamp(28px,5vw,76px);align-items:center}
+#main .bn-sv-hero-copy{min-width:0}
+#main .bn-sv-hero-copy h1{font-size:min(2.4vw,38px)!important;line-height:1.18;letter-spacing:-.035em;max-width:24ch;margin:18px 0;color:var(--bn-sv-ink)}
+#main .bn-sv-hero-copy p{max-width:54ch;line-height:1.75;margin:0 0 26px;color:#4f6761;font-size:clamp(.98rem,1.15vw,1.13rem)}
+#main .bn-sv-hero-photo{min-width:0;position:relative;border-radius:25px;overflow:hidden;box-shadow:0 24px 52px #0b544021;aspect-ratio:1.5}
+#main .bn-sv-hero-photo img{display:block;width:100%;height:100%;object-fit:cover}
+#main .bn-sv-hero-note{position:absolute;bottom:19px;left:19px;right:19px;max-width:max-content;border-radius:10px;padding:12px 16px;background:#0a3339d9;color:#fff;font-size:.78rem;font-weight:700;backdrop-filter:blur(8px)}
+#main .bn-sv-catalog{padding-block:clamp(56px,6vw,88px)}
+#main .bn-sv-section-head{margin:0 0 32px}
+#main .bn-sv-section-head h2{font-size:min(2.4vw,36px)!important;line-height:1.2;margin:12px 0;color:inherit;letter-spacing:-.025em}
+#main .bn-sv-section-head p{max-width:70ch;line-height:1.7;margin:0;color:#cce7df}
+#main .bn-sv-catalog .va-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important;margin-top:22px}
+#main .bn-sv-catalog .bn-experience-service-media{aspect-ratio:1.72!important}
+#main .bn-sv-catalog .bn-experience-service-card{border-radius:22px!important;box-shadow:0 14px 35px #001e2733!important}
+#main .bn-sv-catalog .bn-experience-service-body{padding:19px 17px 15px!important}
+#main .bn-sv-catalog .bn-experience-service-body h3{font-size:clamp(1.03rem,1.16vw,1.18rem)!important}
+#main .bn-sv-catalog .bn-experience-service-card:hover{box-shadow:0 26px 54px #001e2759!important}
+#main .bn-sv-approach{background:#f4faf7}
+#main .bn-sv-approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}
+#main .bn-sv-approach h2{font-size:min(2.4vw,36px)!important;line-height:1.22;max-width:26ch}
+#main .bn-sv-approach p{line-height:1.8;color:#46665e;margin:0 0 20px}
+#main .bn-admin-detail-v2 .bn-experience-detail-hero{padding-bottom:clamp(36px,4vw,64px)}
+#main .bn-admin-detail-v2 .bn-experience-detail-photo img{object-fit:cover}
+#main .bn-sv-detail-focus{background:#f4faf7;padding-block:clamp(48px,5vw,78px)}
+#main .bn-sv-detail-focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,5vw,70px);align-items:center}
+#main .bn-sv-detail-focus-grid h2{font-size:min(2.4vw,36px)!important;line-height:1.25;letter-spacing:-.03em}
+#main .bn-sv-detail-focus-grid p{line-height:1.8;color:#516e66;max-width:58ch}
+#main .bn-sv-detail-focus-grid figure{margin:0;border-radius:21px;overflow:hidden;box-shadow:0 20px 40px #063d3020}
+#main .bn-sv-detail-focus-grid img{display:block;width:100%;height:auto;aspect-ratio:1.56;object-fit:cover}
+#main .bn-admin-detail-v2 .bn-experience-task-grid li{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+#main .bn-admin-detail-v2 .bn-experience-task-grid li:hover{transform:translateY(-5px);border-color:#85cdbb;box-shadow:0 15px 32px #083c2b1c}
+#main .bn-sv-deliverables{background:#f9fcfb}
+#main .bn-sv-deliverables .bn-sv-section-head h2{color:#133f39}
+#main .bn-sv-workflow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#main .bn-sv-workflow article{background:#fff;border:1px solid #dbece6;border-radius:17px;padding:25px;box-shadow:0 10px 26px #092e260a;transition:transform .28s ease,box-shadow .28s ease}
+#main .bn-sv-workflow article:hover{transform:translateY(-5px);box-shadow:0 16px 34px #092e2620}
+#main .bn-sv-workflow article>span{font-weight:800;font-size:.75rem;color:#0b7564;letter-spacing:.12em}
+#main .bn-sv-workflow h3{color:#123c37;font-size:1.1rem;margin:16px 0 9px}
+#main .bn-sv-workflow p{line-height:1.7;color:#567168;margin:0;font-size:.93rem}
+@media(max-width:1000px){#main .bn-sv-catalog .va-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:760px){
+ #main .bn-sv-hero-layout,#main .bn-sv-approach-grid,#main .bn-sv-detail-focus-grid{grid-template-columns:1fr}
+ #main .bn-sv-hero-copy h1,#main .bn-sv-section-head h2,#main .bn-sv-detail-focus-grid h2,#main .bn-sv-approach h2{font-size:clamp(1.35rem,3.9vw,1.9rem)!important}
+ #main .bn-sv-hero-photo{aspect-ratio:1.6}
+ #main .bn-sv-workflow{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+ #main .bn-sv-catalog .va-service-grid{grid-template-columns:1fr!important;gap:15px!important}
+ #main .bn-sv-hero-copy h1{max-width:none}
+ #main .bn-sv-hero-note{font-size:.7rem;padding:9px 11px}
+}
+@media(prefers-reduced-motion:reduce){#main .bn-services-v2 *,#main .bn-admin-detail-v2 *{animation:none!important;transition:none!important}}

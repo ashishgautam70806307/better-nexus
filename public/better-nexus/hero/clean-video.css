@@ -1,0 +1,8 @@
+/* Homepage video only; no header, navbar or card changes. */
+#main .bn-clean-video-hero{position:relative;display:block;width:100%;height:calc(100svh - 110px);min-height:420px;overflow:hidden;background:#092b35;isolation:isolate}
+#main .bn-clean-video-poster,#main .bn-clean-video-poster img,#main .bn-clean-video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center center}
+#main .bn-clean-video-poster{z-index:0}
+#main .bn-clean-video{z-index:1;background:transparent}
+#main .bn-clean-video[hidden]{display:none!important}
+@media(max-width:767px){#main .bn-clean-video-hero{height:calc(100svh - 90px);min-height:340px}}
+@media(prefers-reduced-motion:reduce){#main .bn-clean-video{display:none!important}}

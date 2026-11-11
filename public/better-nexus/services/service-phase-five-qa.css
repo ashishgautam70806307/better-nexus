@@ -1,0 +1,27 @@
+/* Phase 5: service details QA corrections only; no header/home/admin selectors. */
+#main .bn-unique-service{min-width:0;overflow:clip}
+#main .bn-unique-service :is(.bn-ux-panel,.bn-ux-story,.bn-ux-final){min-width:0}
+#main .bn-unique-service :is(.bn-ux-panel,.bn-ux-story,.bn-ux-final) :is(h2,p){overflow-wrap:break-word}
+/* Maintain agreed desktop 2.4vw cap; scale progressively on smaller displays. */
+@media(min-width:1024px){
+ #main .bn-unique-service .bn-experience-detail-copy h1{font-size:min(2.4vw,38px)!important;line-height:1.17}
+}
+@media(min-width:691px) and (max-width:1023px){
+ #main .bn-unique-service .bn-experience-detail-copy h1{font-size:clamp(1.6rem,3.2vw,2.1rem)!important}
+ #main .bn-unique-service :is(.bn-ux-panel,.bn-ux-story,.bn-ux-final) h2{font-size:clamp(1.45rem,2.8vw,2rem)!important}
+}
+@media(max-width:690px){
+ #main .bn-unique-service .bn-experience-detail-copy h1{font-size:clamp(1.4rem,5.2vw,1.9rem)!important}
+ #main .bn-unique-service .bn-ux-panel .bn-ux-ledger-head,
+ #main .bn-unique-service .bn-ux-panel .bn-ux-ledger article{grid-template-columns:66px minmax(0,1fr);gap:9px;padding-inline:11px}
+ #main .bn-unique-service .bn-ux-creative-stack article:nth-child(2){margin-left:0}
+ #main .bn-unique-service .bn-ux-support-flow article{margin-right:0}
+}
+/* Account for persistent header when linking to a service's editorial content. */
+#main .bn-unique-service #bn-service-editorial,
+#main .bn-unique-service #bn-admin-priority-board{scroll-margin-top:clamp(95px,10vw,138px)}
+/* Avoid keyboard-focus ambiguity and preserve tap targets. */
+#main .bn-unique-service :is(.va-button,.va-card-link):focus-visible{outline:3px solid #0a7769;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){
+ #main .bn-unique-service :is(.bn-ux-photo img,.bn-ux-creative-stack article,.bn-ux-marketing-stack li,.bn-ux-kanban article){transition:none!important;transform:none!important}
+}

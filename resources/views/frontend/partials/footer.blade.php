@@ -1,5 +1,5 @@
 {{-- Footer styles are independent of the header and previous footer versions. --}}
-<link rel="stylesheet" href="{{ asset('better-nexus/footer/footer.css') }}?v=20261029menus">
+<link rel="stylesheet" href="{{ asset('better-nexus/footer/footer.css') }}?v=20261105brand">
 @php
     $footerLogo = site_asset('header_logo');
     $brandName = site_setting('website_name') ?: 'Better Nexus';
@@ -22,7 +22,7 @@
                     @if($footerLogo)<img class="bn-mf-custom-logo" src="{{ $footerLogo }}" alt="{{ $brandName }}" width="320" height="90" loading="lazy">
                     @else<img class="bn-mf-emblem" src="{{ asset('better-nexus/footer/emblem.webp') }}" alt="" width="80" height="80" loading="lazy"><img class="bn-mf-wordmark" src="{{ asset('better-nexus/footer/wordmark.webp') }}" alt="{{ $brandName }} — Refined Remote Talent" width="235" height="50" loading="lazy">@endif
                 </a>
-                {{-- <p class="bn-mf-brand-description">We connect your business with skilled remote professionals.<br>Thoughtful support, built around the way you work.</p> --}}
+                <p class="bn-mf-brand-description">Skilled remote professionals for the work that keeps your business moving.</p>
                 @if(count($footerSocials))<div class="bn-mf-socials bn-mf-brand-socials" aria-label="Social links">@foreach($footerSocials as $key => [$label,$icon])<a href="{{ site_setting($key) }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $label }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{!! $icon !!}</svg></a>@endforeach</div>@endif
             </div>
             <nav class="bn-mf-explore" aria-label="Footer navigation"><h2>Explore</h2><div class="bn-mf-nav-links">

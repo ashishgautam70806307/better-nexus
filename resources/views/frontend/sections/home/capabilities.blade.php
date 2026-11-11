@@ -4,7 +4,6 @@ $descriptions = [
 'creative-services'=>'A distinctive visual voice, brought to life through thoughtful design and purposeful creative work.',
 'customer-support-and-experience'=>'Helpful answers and considered follow-through, wherever your customers connect with you.',
 'digital-marketing-services'=>'Bring content, search and social together around your audience and your business goals.',
-'engineering-services'=>'Extend your capacity for technical drawings, documentation, design and project coordination.',
 'finance-and-accounting'=>'More clarity across bookkeeping, invoices, reporting and everyday financial operations.',
 'software-and-app-development'=>'Practical digital tools and applications designed around the people who use them.',
 'website-revamp-and-optimization'=>'Clearer journeys, purposeful interfaces and websites that work across screens.'

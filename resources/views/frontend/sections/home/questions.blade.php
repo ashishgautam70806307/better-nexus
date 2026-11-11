@@ -1,1 +1,17 @@
-<section class="nx-section nx-faq"><div class="nx-wrap nx-faq-grid"><div data-nx-reveal><span class="nx-kicker">06 / A LITTLE CLARITY</span><h2>Good questions.<br><em>Clear answers.</em></h2><p>Still thinking it through? Let’s talk about what your business needs.</p><a class="nx-text-link" href="{{ route('contact-us') }}">Ask us a question ↗</a></div><div>@foreach([['What can Better Nexus help with?','We connect businesses with administrative, creative, marketing, customer experience, finance, engineering and technology support. Start with one priority or discuss several connected needs.'],['Can I start with a specific project?','Yes. Tell us about the scope, timeline and skills you need. We will discuss an approach that fits your project and working style.'],['How do we stay connected?','We agree on communication, responsibilities and review points at the start, so everyone understands the priorities and the next steps.'],['Can the support change as my business grows?','Your needs can evolve. We review the work with you and discuss how the scope or capabilities should adapt.']] as $faq)<details class="nx-question"><summary>{{ $faq[0] }}<span aria-hidden="true">+</span></summary><p>{{ $faq[1] }}</p></details>@endforeach</div></div></section>
+<section class="va-section va-lead" id="va-faq" aria-labelledby="va-faq-heading"><div class="va-wrap va-split va-faq">
+    <div><span class="va-kicker">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 id="va-faq-heading">Good questions. Clear answers.</h2>
+        <p>Here’s what to know before you delegate your first task.</p>
+        <a class="va-card-link" href="{{ route('contact-us') }}#bn-contact-live">Ask us a question <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="va-faq-list">
+        @foreach([
+            ['What can a virtual assistant help with?', 'You can discuss inboxes, calendars, customer requests, content updates, records and routine follow-ups. Browse our services to find the closest fit.'],
+            ['Can I start with just one task?', 'Yes. Bring one repeatable task or a clear project. We can discuss the steps, timing and approvals before you start.'],
+            ['Can an assistant use the tools we already work in?', 'Tell us which tools your team uses. We’ll discuss the access the task needs and what should stay with your team.'],
+            ['How will I know what has been done?', 'Agree on a shared task list or update rhythm up front, including when an assistant should flag a question or ask for approval.'],
+        ] as [$question, $answer])
+            <details class="va-question"><summary>{{ $question }}<span aria-hidden="true"></span></summary><p>{{ $answer }}</p></details>
+        @endforeach
+    </div>
+</div></section>

@@ -1,0 +1,178 @@
+/* Better Nexus — scoped public content only. No header, nav, brand, footer or admin selectors. */
+#main .bn-experience-catalog{
+  background:radial-gradient(ellipse at 100% 0%,rgba(40,119,121,.52),transparent 55%),linear-gradient(135deg,#082c37 0%,#0d4348 68%,#084049 100%);
+  color:#f7fffd;
+}
+#main .bn-experience-catalog .va-wrap > .va-kicker{color:#a9e3d6}
+#main .bn-experience-catalog .va-wrap > h2{max-width:850px;color:#f9fffe;margin-bottom:14px}
+#main .bn-experience-catalog .va-wrap > p{color:#c7e0df;max-width:690px;margin-bottom:30px;font-size:clamp(.95rem,1.25vw,1.1rem)}
+#main .bn-experience-catalog .va-service-grid{margin-top:28px}
+#main .va-service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.35vw,22px);align-items:stretch}
+#main .va-service-grid .bn-experience-service-card{display:flex;flex-direction:column;overflow:hidden;position:relative;min-width:0;height:100%;background:#fff;color:#173b3b;border:1px solid #d7e6e2;border-radius:19px;padding:7px;text-decoration:none;box-shadow:0 10px 25px rgba(1,20,32,.12);transition:transform .32s cubic-bezier(.21,.8,.22,1),box-shadow .32s,border-color .32s}
+#main .va-service-grid .bn-experience-service-card:hover{transform:translateY(-8px);border-color:#74d3c3;box-shadow:0 22px 44px rgba(1,20,32,.29)}
+#main .va-service-grid .bn-experience-service-card:focus-visible{outline:3px solid #8ee7d6;outline-offset:4px}
+#main .va-service-grid .bn-experience-service-media{position:relative;display:block;flex:none;padding:0;overflow:hidden;border-radius:13px;background:#0c3341;aspect-ratio:1.56;isolation:isolate}
+#main .va-service-grid .bn-experience-service-media::after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(0deg,rgba(4,32,40,.68),transparent);pointer-events:none}
+#main .va-service-grid .bn-experience-service-media img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;border-radius:0;transform:scale(1);transition:transform .62s cubic-bezier(.19,.85,.31,1);filter:saturate(.92)}
+#main .va-service-grid .bn-experience-service-card:hover .bn-experience-service-media img{transform:scale(1.08);filter:saturate(1.08)}
+#main .va-service-grid .bn-experience-service-number{position:absolute;left:12px;bottom:12px;z-index:2;display:inline-flex;padding:5px 8px;background:#f4fffae6;border:1px solid #ffffffa1;border-radius:99px;color:#0b4b4b;font-size:9px;line-height:1.25;font-weight:800;letter-spacing:.08em;backdrop-filter:blur(8px)}
+#main .va-service-grid .bn-experience-service-body{display:flex;flex:1;flex-direction:column;gap:0;min-width:0;padding:17px 12px 13px}
+#main .va-service-grid .bn-experience-service-body .va-card-heading{align-items:start;display:flex;gap:10px;justify-content:space-between}
+#main .va-service-grid .bn-experience-service-body h3{font-size:clamp(.99rem,1.15vw,1.12rem);font-weight:750;line-height:1.35;margin:0;color:#173b40;min-width:0;letter-spacing:-.02em}
+#main .va-service-grid .bn-experience-service-body p{font-size:.86rem;line-height:1.65;color:#597071;margin:12px 0 19px;max-width:100%;flex:1}
+#main .va-service-grid .bn-experience-service-body .va-card-arrow{display:grid;place-items:center;flex:none;width:29px;height:29px;border-radius:50%;background:#eff8f5;border:1px solid #d0e7e1;color:#0d665b;font-size:15px;transform:rotate(0);transition:transform .28s,background .28s,color .28s}
+#main .va-service-grid .bn-experience-service-card:hover .va-card-arrow{transform:rotate(45deg);background:#0d665b;color:white}
+#main .va-service-grid .bn-experience-service-link{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid #e2ece8;font-size:.76rem;letter-spacing:.01em;color:#0d6d61;font-weight:800}
+#main .va-service-grid .bn-experience-service-link span{font-size:1rem;transform:translateX(0);transition:transform .25s}
+#main .va-service-grid .bn-experience-service-card:hover .bn-experience-service-link span{transform:translateX(4px)}
+
+/* Service detail: same content data and working slugs, presentation only. */
+#main .bn-experience-detail-hero{padding-top:clamp(36px,5vw,75px);padding-bottom:clamp(46px,6vw,90px);background:radial-gradient(circle at 85% 0,#deefe7,transparent 45%),#f5faf7}
+#main .bn-experience-detail-hero .va-split{grid-template-columns:minmax(0,1fr) minmax(0,.92fr)}
+#main .bn-experience-detail-copy .va-crumb{margin-bottom:30px}
+#main .bn-experience-detail-copy>p{max-width:58ch;font-size:clamp(1rem,1.25vw,1.15rem);line-height:1.8}
+#main .bn-experience-detail-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;margin-top:25px}
+#main .bn-experience-detail-actions .va-button{margin:0}
+#main .bn-experience-detail-photo{position:relative;margin:0;min-width:0}
+#main .bn-experience-detail-photo .va-art{aspect-ratio:1.25;border-radius:24px;box-shadow:0 24px 48px #1b4b422a}
+#main .bn-experience-detail-photo figcaption{position:absolute;bottom:16px;left:16px;right:16px;background:#07323abf;color:#f5fffd;border:1px solid #ffffff40;border-radius:10px;backdrop-filter:blur(6px);padding:13px 16px;font-size:12px;letter-spacing:.02em}
+#main .bn-experience-section-intro{display:flex;justify-content:space-between;align-items:end;gap:22px 50px;margin-bottom:28px}
+#main .bn-experience-section-intro>div{max-width:670px}
+#main .bn-experience-section-intro h2{margin:8px 0 0;color:#143d39}
+#main .bn-experience-section-intro>p{max-width:440px;margin:0;color:#526e65;font-size:.98rem;line-height:1.7}
+#main .bn-experience-detail-tasks{background:#fff}
+#main .bn-experience-task-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;list-style:none;padding:0;margin:0}
+#main .bn-experience-task-grid li{position:relative;padding:28px 24px 31px;background:linear-gradient(145deg,#f7fbf9,#eff7f2);border:1px solid #dbe9e3;border-radius:18px;box-shadow:0 8px 26px #1d54420b}
+#main .bn-experience-task-grid li::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;border-radius:18px 0 0 18px;background:#65b9a8}
+#main .bn-experience-task-grid li span{font-size:12px;font-weight:800;color:#117367;letter-spacing:.13em}
+#main .bn-experience-task-grid li p{font-weight:600;color:#254843;font-size:1rem;line-height:1.6;margin:18px 0 0}
+#main .bn-experience-start{background:#0b3840;color:#f5fffe}
+#main .bn-experience-start-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px)}
+#main .bn-experience-start h2{color:#f6fffe;max-width:660px}
+#main .bn-experience-start p{color:#cfdfde}
+#main .bn-experience-start .va-kicker{color:#a8e5d5}
+#main .bn-experience-start-side{padding:24px 26px;background:#ffffff0d;border:1px solid #ffffff26;border-radius:20px}
+#main .bn-experience-start-side>span{display:block;color:#a8e5d5;font-weight:800;font-size:.73rem;letter-spacing:.12em;margin:4px 0 6px}
+#main .bn-experience-start-side p{margin-bottom:20px;font-size:.97rem}
+#main .bn-experience-start-side .va-button{background:#c7ede1;color:#083e3b;margin-top:8px}
+#main .bn-experience-start-side .va-button:hover{background:#fff}
+#main .bn-experience-related{background:#f5faf7}
+#main .bn-experience-related .va-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+/* Journal cards shared between home/latest, index, and article related. */
+#main .bn-experience-blog-grid,#main #va-blogs .va-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,26px)}
+#main .bn-experience-blog-card{display:flex;flex-direction:column;min-width:0;height:100%;border-radius:20px;padding:8px;background:#fff;border:1px solid #dde9e5;box-shadow:0 10px 24px #053d320c;overflow:hidden;transition:transform .32s cubic-bezier(.18,.8,.22,1),box-shadow .32s,border-color .32s}
+#main .bn-experience-blog-card:hover{transform:translateY(-7px);border-color:#a6d3c6;box-shadow:0 20px 38px #053d3221}
+#main .bn-experience-blog-card .bn-journal-cover{display:block;position:relative;overflow:hidden;background:#d4e7e0;aspect-ratio:16/10;border-radius:13px}
+#main .bn-experience-blog-card .bn-journal-cover img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.19,.85,.31,1)}
+#main .bn-experience-blog-card:hover .bn-journal-cover img{transform:scale(1.07)}
+#main .bn-experience-cover-corner{position:absolute;right:13px;top:13px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;color:#174a47;background:#ffffffdf;border:1px solid #ffffff99;font-size:17px;transition:background .24s,color .24s,transform .24s}
+#main .bn-experience-blog-card:hover .bn-experience-cover-corner{background:#136c61;color:white;transform:rotate(45deg)}
+#main .bn-experience-blog-card .bn-journal-card-copy{padding:18px 13px 13px;display:flex;flex:1;flex-direction:column;min-width:0}
+#main .bn-experience-blog-card .bn-journal-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px;margin-bottom:13px;font-size:.72rem;color:#68847a;letter-spacing:0}
+#main .bn-experience-blog-card .bn-journal-meta span{display:inline-flex;color:#0d685e;background:#e8f6ef;border-radius:99px;padding:6px 10px;font-size:.68rem;font-weight:750}
+#main .bn-experience-blog-card h3{font-size:clamp(1.05rem,1.3vw,1.25rem);font-weight:770;line-height:1.43;letter-spacing:-.02em;margin:0 0 10px;color:#183d3b;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#main .bn-experience-blog-card h3 a{color:inherit;text-decoration:none}
+#main .bn-experience-blog-card h3 a:hover{color:#127364}
+#main .bn-experience-blog-card p{font-size:.88rem;line-height:1.7;color:#5a6f69;min-width:0;margin:0 0 18px;flex:1}
+#main .bn-experience-blog-card .bn-journal-read{display:inline-flex;justify-content:space-between;align-items:center;gap:10px;width:100%;margin-top:auto;padding:12px 14px;border-radius:10px;background:#115f58;color:white;text-decoration:none;font-size:.84rem;font-weight:800;line-height:1.4;transition:background .22s,color .22s}
+#main .bn-experience-blog-card .bn-journal-read:hover{background:#0a413f;color:#fff}
+#main .bn-experience-blog-card a:focus-visible{outline:3px solid #2d9b85;outline-offset:3px}
+
+/* Dynamic blog listing and search. */
+#main .bn-experience-blog-index .bn-journal-heading{padding:clamp(36px,5vw,76px) 0;background:radial-gradient(circle at 85% 20%,#ddf2e9,transparent 55%),#f5faf7;color:#183d3b}
+#main .bn-experience-blog-index .bn-journal-heading .va-split{gap:clamp(20px,4vw,65px)}
+#main .bn-experience-blog-index .bn-journal-heading h1{margin:10px 0 16px;color:#15423e;max-width:24ch}
+#main .bn-experience-blog-index .bn-journal-heading p{max-width:60ch;color:#56736a;line-height:1.8;font-size:1rem}
+#main .bn-experience-blog-index .bn-journal-heading .va-journal-art{width:100%;max-width:none;aspect-ratio:1.55;object-fit:cover;border-radius:22px;box-shadow:0 18px 40px #164a4217}
+#main .bn-experience-blog-index .bn-journal-count{display:inline-block;margin-top:14px;font-size:11px;font-weight:750;padding:8px 14px}
+#main .bn-experience-blog-listing{background:#fbfdfb}
+#main .bn-experience-blog-toolbar{display:flex;justify-content:space-between;align-items:end;gap:16px 32px;flex-wrap:wrap;margin-bottom:30px}
+#main .bn-experience-blog-toolbar h2{margin:6px 0 0}
+#main .bn-experience-search{display:flex;align-items:stretch;gap:9px;max-width:470px;width:100%}
+#main .bn-experience-search input{min-width:0;flex:1;padding:13px 15px;border:1px solid #cddfd8;border-radius:12px;font-size:14px;background:#fff;color:#143f3a}
+#main .bn-experience-search button{padding:12px 17px;background:#12675c;border:0;border-radius:12px;color:white;font-weight:750;font-size:13px;white-space:nowrap;transition:background .2s}
+#main .bn-experience-search button:hover{background:#08433d}
+#main .bn-experience-search :focus-visible{outline:3px solid #55baa5;outline-offset:2px}
+#main .bn-experience-blog-empty{text-align:center;border:1px solid #d6e7df;border-radius:22px;padding:clamp(35px,5vw,65px);background:#fff}
+#main .bn-experience-blog-empty h3{font-size:1.25rem}
+#main .bn-experience-pagination{margin-top:34px}
+#main .bn-experience-pagination .bn-journal-pagination{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:#63776e}
+#main .bn-experience-pagination .bn-journal-pagination>div{display:flex;gap:9px}
+#main .bn-experience-pagination .bn-journal-pagination a,#main .bn-experience-pagination .bn-journal-pagination [aria-disabled]{display:inline-block;border:1px solid #c9e3d7;border-radius:10px;padding:10px 15px;text-decoration:none;background:white;color:#0b655a}
+#main .bn-experience-pagination .bn-journal-pagination [aria-disabled]{opacity:.5}
+
+/* Article reading layout. No changes to database, routes, sanitizer or admin editor. */
+#main .bn-experience-story{padding:clamp(32px,5vw,72px) 0;background:#fbfdfb;color:#1a3a39}
+#main .bn-experience-story .bn-story-crumb{margin-bottom:25px}
+#main .bn-experience-story .bn-story-heading{max-width:970px;margin:0 auto 32px;text-align:center}
+#main .bn-experience-story .bn-experience-article-label{display:inline-flex;padding:7px 14px;color:#0b675e;background:#e5f5ef;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+#main .bn-experience-story .bn-story-heading h1{max-width:29ch;margin:18px auto;line-height:1.17;color:#163e3e;letter-spacing:-.035em}
+#main .bn-experience-story .bn-story-byline{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px 19px;color:#6b817b;font-size:.81rem}
+#main .bn-experience-story-cover{overflow:hidden;background:#d3e8df;border-radius:23px;max-width:1180px;margin:0 auto 48px}
+#main .bn-experience-story .bn-story-main-cover{display:block;width:100%;max-width:100%;height:auto;max-height:620px;aspect-ratio:1.95;object-fit:cover;border-radius:0}
+#main .bn-experience-story .bn-story-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,310px);gap:clamp(28px,5vw,74px);align-items:start;max-width:1180px;margin:auto}
+#main .bn-experience-story-main{min-width:0;max-width:760px}
+#main .bn-experience-story .bn-story-lead{font-size:1.13rem;line-height:1.8;font-weight:500;color:#355952;border-left:4px solid #4ea58c;padding:12px 0 12px 24px;margin-bottom:30px}
+#main .bn-experience-story .bn-story-copy{font-size:clamp(.99rem,1.2vw,1.1rem);line-height:1.95;color:#304d47;min-width:0;overflow-wrap:anywhere}
+#main .bn-experience-story .bn-rich-output h2{font-size:clamp(1.3rem,1.65vw,1.8rem)!important;margin:1.8em 0 .55em;letter-spacing:-.02em;color:#123f39}
+#main .bn-experience-story .bn-rich-output h3{font-size:1.18rem;color:#174a42}
+#main .bn-experience-story .bn-rich-output img{max-width:100%;height:auto}
+#main .bn-experience-story .bn-rich-output table{display:block;max-width:100%;overflow:auto}
+#main .bn-experience-story .bn-story-back{display:inline-flex;margin-top:30px;color:#13685d;text-decoration:none;font-size:.93rem;font-weight:800}
+#main .bn-experience-story .bn-story-support{position:sticky;top:110px;padding:27px 25px;border-radius:18px;background:#0c3e43;color:#fff}
+#main .bn-experience-story .bn-story-support>span{font-size:11px;font-weight:800;letter-spacing:.11em;color:#a4e5d4}
+#main .bn-experience-story .bn-story-support h2{color:#fff;margin:16px 0 12px;font-size:clamp(1.25rem,1.55vw,1.55rem)!important;line-height:1.3}
+#main .bn-experience-story .bn-story-support p{color:#d2e5e1;line-height:1.7;font-size:.9rem}
+#main .bn-experience-story .bn-story-support a{display:block;text-decoration:none;background:#c1ebdd;color:#103f3b;border-radius:10px;padding:12px 14px;font-weight:800;text-align:center;font-size:.88rem}
+#main .bn-experience-story .bn-related{border-top:1px solid #dce9e2;padding-top:50px;margin-top:70px}
+#main .bn-experience-story .bn-related .bn-experience-section-intro{margin-bottom:27px}
+
+/* Reveal animation: enhancement only, content remains visible without JS. */
+@media(prefers-reduced-motion:no-preference){
+  html.bn-experience-motion #main .bn-reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease var(--bn-stagger,0ms),transform .65s cubic-bezier(.2,.7,.22,1) var(--bn-stagger,0ms)}
+  html.bn-experience-motion #main .bn-reveal.bn-revealed{opacity:1;transform:translateY(0)}
+  html.bn-experience-motion #main .bn-reveal.bn-revealed:hover{transform:translateY(-7px)}
+}
+@media(max-width:1060px){
+  #main .va-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #main .bn-experience-related .va-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:900px){
+  #main .va-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #main .bn-experience-related .va-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #main .bn-experience-detail-hero .va-split{grid-template-columns:1fr 1fr;gap:25px}
+  #main .bn-experience-blog-grid,#main #va-blogs .va-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #main .bn-experience-task-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+  #main .bn-experience-detail-hero .va-split,#main .bn-experience-start-grid{grid-template-columns:1fr}
+  #main .bn-experience-detail-photo .va-art{aspect-ratio:16/10}
+  #main .bn-experience-section-intro{align-items:start;flex-direction:column}
+  #main .bn-experience-story .bn-story-body{grid-template-columns:1fr}
+  #main .bn-experience-story .bn-story-support{position:static}
+  #main .bn-experience-story-cover{margin-bottom:30px}
+  #main .bn-experience-story .bn-story-heading{text-align:left}
+  #main .bn-experience-story .bn-story-heading h1{margin-left:0}
+  #main .bn-experience-story .bn-story-byline{justify-content:flex-start}
+}
+@media(max-width:620px){
+  #main .va-service-grid,#main .bn-experience-related .va-service-grid{grid-template-columns:1fr;gap:16px}
+  #main .bn-experience-blog-grid,#main #va-blogs .va-cards{grid-template-columns:1fr}
+  #main .bn-experience-task-grid{grid-template-columns:1fr;gap:12px}
+  #main .va-service-grid .bn-experience-service-media{aspect-ratio:16/9}
+  #main .va-service-grid .bn-experience-service-body{padding:16px 13px 13px}
+  #main .va-service-grid .bn-experience-service-body h3{font-size:1.08rem}
+  #main .bn-experience-blog-toolbar{align-items:stretch}
+  #main .bn-experience-search{max-width:none}
+  #main .bn-experience-blog-index .bn-journal-heading .va-journal-art{max-width:100%;width:100%;aspect-ratio:16/9}
+  #main .bn-experience-story .bn-story-main-cover{aspect-ratio:16/10}
+  #main .bn-experience-story .bn-related{padding-top:32px;margin-top:42px}
+}
+@media(max-width:380px){
+  #main .bn-experience-search{flex-direction:column}
+  #main .bn-experience-search button{min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){
+  #main :is(.bn-experience-service-card,.bn-experience-service-media img,.bn-experience-blog-card,.bn-journal-cover img,.bn-experience-cover-corner){transition:none!important;transform:none!important}
+}

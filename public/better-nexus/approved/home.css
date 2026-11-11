@@ -32,3 +32,25 @@
 /* A following orbit, centre dot, resting ripple and interactive hover response. */
 .bn-cursor-aura{left:0!important;top:0!important;width:0!important;height:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;opacity:0;animation:none!important;transition:opacity .2s!important;will-change:transform}.bn-cursor-aura.is-moving,.bn-cursor-aura.is-resting{opacity:1!important;animation:none!important}.bn-cursor-orbit{position:absolute;left:-19px;top:-19px;width:38px;height:38px;border:1px solid #2caa96a0;border-radius:50%;background:#5ccab208;box-shadow:0 0 20px #7ce7d01a;transition:width .4s,height .4s,left .4s,top .4s,background .4s,border-color .4s;transform-origin:center}.bn-cursor-orbit:before{content:'';position:absolute;top:-3px;left:50%;width:5px;height:5px;background:#37af9a;border-radius:50%;box-shadow:0 0 8px #76dfc8}.bn-cursor-core{position:absolute;width:4px;height:4px;left:-2px;top:-2px;background:#2e9f8b;border-radius:50%;transition:opacity .2s}.bn-cursor-aura.is-moving .bn-cursor-orbit{animation:bn-cursor-spin 3s linear infinite}.bn-cursor-aura.is-resting .bn-cursor-orbit{animation:bn-cursor-breathe 2s ease-in-out infinite}.bn-cursor-aura.is-link .bn-cursor-orbit{width:52px;height:52px;left:-26px;top:-26px;border-color:#199c82;background:#36bd9b12}.bn-cursor-aura.is-link .bn-cursor-core{opacity:0}.bn-cursor-aura.is-clicked .bn-cursor-orbit{background:#5fdcba33;border-color:#0c9276}.bn-cursor-aura.is-input{opacity:0!important}@keyframes bn-cursor-spin{to{transform:rotate(360deg)}}@keyframes bn-cursor-breathe{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.22);opacity:1}}
 @media(hover:none){.bn-approved-home .bn2-service-card:hover{transform:none!important}.bn-cursor-aura{display:none!important}}@media(prefers-reduced-motion:reduce){.bn-approved-home .bn2-service-card,.bn-approved-home .bn2-service-card *{transition:none!important}.bn-approved-home .bn2-service-card:hover{transform:none!important}.bn-cursor-aura{display:none!important}}
+
+/* Landing photography */
+.bn-approved-home .bn-film-shade{
+  background:linear-gradient(90deg,rgba(3,27,35,.64),transparent 76%),
+             linear-gradient(0deg,rgba(3,27,35,.82),transparent 68%);
+}
+.bn-approved-home .bn-partnership-portrait img{
+  height:auto!important;aspect-ratio:7/5;object-fit:cover!important;object-position:center!important;
+  border:1px solid rgba(220,255,248,.32);border-radius:20px;
+}
+@media(max-width:700px){
+  .bn-approved-home .bn-home-media .bn-approved-poster{object-position:center}
+  .bn-approved-home .bn-partnership-portrait{width:100%}
+}
+.bn-approved-home .bn-collage-portraits:last-child img:nth-child(2){top:auto;bottom:14%;right:0}
+@media(max-width:700px){
+  .bn-approved-home .bn-approved-film video,
+  .bn-approved-home .bn-approved-film .bn-approved-poster{object-position:72% center}
+}
+@media(prefers-reduced-motion:reduce){
+  .bn-approved-home .bn-approved-film video{display:none}
+}

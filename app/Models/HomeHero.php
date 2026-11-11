@@ -8,8 +8,13 @@ class HomeHero extends Model
     protected $guarded = ["id"];
     protected function casts(): array
     {
-        return ["is_active" => "boolean", "show_video" => "boolean"];
+        return ["is_active" => "boolean", "show_video" => "boolean", "desktop_video_published" => "boolean", "mobile_video_published" => "boolean"];
     }
+    public static function isVideoUploadPath(?string $path): bool
+    {
+        return $path !== null && preg_match('~^home-hero-videos/[a-f0-9]{32}\.(mp4|webm)$~D', $path) === 1;
+    }
+
     public function images(): HasMany
     {
         return $this->hasMany(HomeHeroImage::class)

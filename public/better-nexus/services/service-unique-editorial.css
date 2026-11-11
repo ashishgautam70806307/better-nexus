@@ -1,0 +1,65 @@
+/* Service-specific editorial layouts. Deliberately scoped: no header, home hero or global selectors. */
+#main .bn-unique-service{--ux-ink:#123d3a;--ux-teal:#086b62;--ux-mute:#496c65;--ux-line:#d5e7df}
+#main .bn-unique-service .bn-experience-detail-photo figcaption{font-size:.8rem}
+#main .bn-unique-service .bn-ux-panel,#main .bn-unique-service .bn-ux-story,#main .bn-unique-service .bn-ux-final{padding-block:clamp(48px,5vw,82px)}
+#main .bn-unique-service .bn-ux-panel{background:#f5faf8}
+#main .bn-unique-service .bn-ux-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(25px,5vw,75px)}
+#main .bn-unique-service .bn-ux-photo{margin:0;overflow:hidden;border-radius:24px;box-shadow:0 22px 50px rgba(5,50,41,.13);aspect-ratio:1.48;min-width:0}
+#main .bn-unique-service .bn-ux-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+#main .bn-unique-service .bn-ux-photo:hover img{transform:scale(1.035)}
+#main .bn-unique-service .bn-ux-panel h2,#main .bn-unique-service .bn-ux-story h2,#main .bn-unique-service .bn-ux-final h2{font-size:min(2.4vw,38px)!important;line-height:1.19;letter-spacing:-.03em;margin:12px 0 17px;color:var(--ux-ink);overflow-wrap:normal}
+#main .bn-unique-service .bn-ux-panel p,#main .bn-unique-service .bn-ux-story p,#main .bn-unique-service .bn-ux-final p{color:var(--ux-mute);line-height:1.7}
+#main .bn-unique-service .bn-ux-heading{max-width:770px;margin-bottom:26px}
+#main .bn-unique-service .bn-ux-heading p{margin:0}
+#main .bn-unique-service .bn-ux-count{font-weight:800;font-size:.77rem;letter-spacing:.1em;color:var(--ux-teal)}
+#main .bn-unique-service .bn-ux-panel ol{list-style:none;margin:0;padding:0}
+#main .bn-unique-service .bn-ux-panel li p,#main .bn-unique-service .bn-ux-panel article p{margin:0}
+#main .bn-unique-service .bn-ux-panel li,#main .bn-unique-service .bn-ux-panel article{min-width:0}
+#main .bn-unique-service .bn-ux-notice,#main .bn-unique-service .bn-ux-highlight{border-left:3px solid #159886;background:#eaf6f1;border-radius:0 14px 14px 0;padding:16px 19px;margin:24px 0}
+#main .bn-unique-service .bn-ux-notice strong,#main .bn-unique-service .bn-ux-highlight strong{color:var(--ux-ink)}
+#main .bn-unique-service .bn-ux-notice p,#main .bn-unique-service .bn-ux-highlight p{margin:5px 0 0;font-size:.94rem}
+#main .bn-unique-service .bn-ux-final{background:#103e3c}
+#main .bn-unique-service .bn-ux-final-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
+#main .bn-unique-service .bn-ux-final h2{color:#fff!important;max-width:30ch}
+#main .bn-unique-service .bn-ux-final p{color:#d3e7df;max-width:66ch;margin:0}
+#main .bn-unique-service .bn-ux-final .va-kicker{color:#9bdccb}
+#main .bn-unique-service .bn-ux-final .va-button{flex:none}
+#main .bn-unique-service .bn-ux-admin-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+#main .bn-unique-service .bn-ux-admin-list li{background:#fff;padding:23px;border:1px solid var(--ux-line);border-radius:18px;display:grid;gap:15px;box-shadow:0 12px 30px #063b3210;transition:transform .25s ease}
+#main .bn-unique-service .bn-ux-admin-list li:hover{transform:translateY(-5px)}
+#main .bn-unique-service .bn-ux-support-lane{background:#ebf7f4}
+#main .bn-unique-service .bn-ux-support-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;position:relative}
+#main .bn-unique-service .bn-ux-support-flow article{border-top:3px solid #0c8b7b;padding:23px 22px 18px;background:#fff;margin-right:10px;border-radius:0 0 16px 16px;transition:transform .25s}
+#main .bn-unique-service .bn-ux-support-flow article:hover{transform:translateY(-4px)}
+#main .bn-unique-service .bn-ux-story-support{background:#fff}
+#main .bn-unique-service .bn-ux-marketing{background:linear-gradient(135deg,#f5faf8,#e8f5f0)}
+#main .bn-unique-service .bn-ux-marketing-stack{display:grid;gap:10px;margin-top:23px!important}
+#main .bn-unique-service .bn-ux-marketing-stack li{display:flex;align-items:flex-start;gap:13px;background:#fff;border:1px solid #dceae3;border-radius:12px;padding:15px 17px;box-shadow:0 4px 15px #04403509}
+#main .bn-unique-service .bn-ux-marketing-stack li p{line-height:1.55}
+#main .bn-unique-service .bn-ux-website-check{background:#fff}
+#main .bn-unique-service .bn-ux-web-list{display:grid;gap:13px}
+#main .bn-unique-service .bn-ux-web-list article{display:flex;align-items:flex-start;gap:22px;border-bottom:1px solid var(--ux-line);padding:19px 10px 19px 0}
+#main .bn-unique-service .bn-ux-web-list article .bn-ux-count{border:1px solid #b9d9cd;border-radius:7px;padding:7px 10px}
+#main .bn-unique-service .bn-ux-story-web{background:#f5faf8}
+#main .bn-unique-service .bn-ux-creative{background:#f9f6f2}
+#main .bn-unique-service .bn-ux-creative-stack{display:grid;gap:12px;margin-top:20px}
+#main .bn-unique-service .bn-ux-creative-stack article{background:white;border:1px solid #eae1d8;border-radius:14px;padding:17px 19px;display:flex;gap:15px;transform:rotate(-.35deg);box-shadow:0 9px 20px #55442d0c}
+#main .bn-unique-service .bn-ux-creative-stack article:nth-child(2){transform:rotate(.45deg);margin-left:12px}
+#main .bn-unique-service .bn-ux-creative-stack article:hover{transform:translateX(5px)}
+#main .bn-unique-service .bn-ux-workflow-board{background:#eaf3f4}
+#main .bn-unique-service .bn-ux-kanban{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#main .bn-unique-service .bn-ux-kanban article{background:#fff;border:1px solid #cfdfe2;border-radius:15px;padding:19px 20px;min-height:145px;box-shadow:0 9px 22px #123c3c0d}
+#main .bn-unique-service .bn-ux-kanban article:before{content:'WORK ITEM';display:block;color:#678c8a;font-size:.7rem;letter-spacing:.12em;font-weight:700;margin-bottom:12px}
+#main .bn-unique-service .bn-ux-kanban article:nth-child(2):before{content:'OWNER & DUE DATE'}
+#main .bn-unique-service .bn-ux-kanban article:nth-child(3):before{content:'FOLLOW-UP'}
+#main .bn-unique-service .bn-ux-story-tools{background:#fff}
+#main .bn-unique-service .bn-ux-finance{background:#f7f9f5}
+#main .bn-unique-service .bn-ux-ledger{border:1px solid #d9e7db;border-radius:14px;overflow:hidden;background:#fff;margin-top:24px}
+#main .bn-unique-service .bn-ux-ledger-head{display:grid;grid-template-columns:90px 1fr;gap:15px;background:#e7f1e9;padding:12px 17px;color:#245d4a;font-size:.71rem;font-weight:700;letter-spacing:.08em}
+#main .bn-unique-service .bn-ux-ledger article{display:grid;grid-template-columns:90px 1fr;gap:15px;padding:13px 17px;border-top:1px solid #e2e9e3}
+#main .bn-unique-service .bn-ux-ledger article p{font-size:.92rem;line-height:1.5}
+#main .bn-unique-service .bn-ux-finance .bn-ux-count{font-size:.8rem}
+#main .bn-unique-service .bn-ux-final-finance{background:#203f38}
+@media(max-width:950px){#main .bn-unique-service .bn-ux-split{grid-template-columns:1fr}#main .bn-unique-service .bn-ux-admin-list,#main .bn-unique-service .bn-ux-support-flow,#main .bn-unique-service .bn-ux-kanban{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:690px){#main .bn-unique-service .bn-ux-panel h2,#main .bn-unique-service .bn-ux-story h2,#main .bn-unique-service .bn-ux-final h2{font-size:clamp(1.3rem,5.2vw,1.85rem)!important}#main .bn-unique-service .bn-ux-admin-list,#main .bn-unique-service .bn-ux-support-flow,#main .bn-unique-service .bn-ux-kanban{grid-template-columns:1fr}#main .bn-unique-service .bn-ux-panel,#main .bn-unique-service .bn-ux-story,#main .bn-unique-service .bn-ux-final{padding-block:42px}#main .bn-unique-service .bn-ux-final-inner{align-items:flex-start;flex-direction:column}#main .bn-unique-service .bn-ux-photo{aspect-ratio:1.25}}
+@media(prefers-reduced-motion:reduce){#main .bn-unique-service .bn-ux-photo img,#main .bn-unique-service .bn-ux-admin-list li,#main .bn-unique-service .bn-ux-support-flow article{transition:none!important;transform:none!important}}

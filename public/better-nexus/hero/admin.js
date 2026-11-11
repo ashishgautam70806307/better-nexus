@@ -3,12 +3,13 @@
     form.addEventListener("submit", (e) => {
       if (
         !confirm(
-          "Remove this image from the homepage? Uploaded files are deleted after the record is removed.",
+          form.dataset.heroConfirm || "Remove this image from the homepage?",
         )
       )
         e.preventDefault();
     }),
   );
+  /* Archived image upload preview.
   const input = document.querySelector("[data-hero-files]"),
     preview = document.querySelector("[data-hero-preview]");
   if (!input || !preview) return;
@@ -42,4 +43,5 @@
       preview.append(img);
     });
   });
+  */
 })();

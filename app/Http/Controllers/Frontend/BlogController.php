@@ -9,7 +9,7 @@ class BlogController extends Controller
     {
         $v = $request->validate(["search" => "nullable|string|max:100"]);
         $search = trim($v["search"] ?? "");
-        $blogs = Blog::published()
+        $blogs = Blog::publicInsights()
             ->when(
                 $search,
                 fn($q) => $q->where(
@@ -27,8 +27,8 @@ class BlogController extends Controller
     public function show(string $slug)
     {
 
-        $blog = Blog::published()->where("slug", $slug)->firstOrFail();
-        $related = Blog::published()
+        $blog = Blog::publicInsights()->where("slug", $slug)->firstOrFail();
+        $related = Blog::publicInsights()
             ->whereKeyNot($blog->id)
             ->latest("published_at")
             ->limit(3)

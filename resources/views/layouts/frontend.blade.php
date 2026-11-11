@@ -12,7 +12,17 @@
     {{-- Bootstrap + custom CSS/JS load ONCE through Vite. --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('better-nexus/shared/forms.css') }}?v=2">
+    <link rel="stylesheet" href="{{ asset('better-nexus/approved/client-feedback.css') }}?v=1">
+    {{-- AOS visual effects, limited to content sections. Fallback is bundled for offline use. --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="{{ asset('better-nexus/experience/landing-aos-refine.css') }}?v=20261111h">
     @stack('styles')
+    <link rel="stylesheet" href="{{ asset('better-nexus/frontend/heading-system.css') }}?v=20261111c">
+    @include('frontend.partials.va-styles')
+    {{-- Experience refinements are scoped to #main; shared header is unchanged. --}}
+    <link rel="stylesheet" href="{{ asset('better-nexus/experience/landing.css') }}?v=20261111e">
+    {{-- Scoped landing content refinements loaded last, never restyle the shared header. --}}
+    <link rel="stylesheet" href="{{ asset('better-nexus/experience/intro-motion-final.css') }}?v=20261111j">
 </head>
 <body class="@yield('body-class')">
     <a class="bn2-skip" href="#main">Skip to content</a>
@@ -25,6 +35,10 @@
     @include('frontend.partials.footer')
     <button class="bn2-to-top" type="button" aria-label="Back to top">↑</button>
     <x-ui.toasts />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
     @stack('scripts')
+    <script src="{{ asset('better-nexus/experience/landing-aos-refine.js') }}?v=20261111h" defer></script>
+    <script src="{{ asset('better-nexus/experience/landing.js') }}?v=20261111e" defer></script>
+    <script src="{{ asset('better-nexus/experience/intro-motion-final.js') }}?v=20261111j" defer></script>
 </body>
 </html>

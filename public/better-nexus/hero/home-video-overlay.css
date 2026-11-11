@@ -1,0 +1,76 @@
+/* Homepage-only video and original header overlay. No shared header file changes. */
+body.bn-video-home {overflow-x:clip}
+/* Preserve the existing pill look, dimensions, links and mobile menu; only change positioning. */
+body.bn-video-home > .bn-approved-header.bn2-header {
+  position:fixed!important;
+  z-index:1100!important;
+  top:14px!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  margin:0!important;
+  width:calc(100% - 56px)!important;
+  max-width:1400px!important;
+}
+body.bn-video-home #main {margin-top:0!important;padding-top:0!important}
+body.bn-video-home #main .bn-clean-video-hero {
+  height:100vh!important;
+  height:100svh!important;
+  min-height:0!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden;
+  position:relative;
+  isolation:isolate;
+  background:#0d343b;
+  --bn-mouse-x:50%;
+  --bn-mouse-y:50%;
+  --bn-wave-strength:0;
+}
+/* Slight atmospheric softening, not enough to hide faces/work details. */
+body.bn-video-home #main .bn-clean-video-hero .bn-clean-video,
+body.bn-video-home #main .bn-clean-video-hero .bn-clean-video-poster img {
+  width:100%!important;height:100%!important;
+  object-fit:cover!important;
+  filter:blur(1.35px)!important;
+  transform:scale(1.018)!important;
+  transform-origin:center center;
+}
+/* Background-only cinematic light: no hero headings, buttons or interaction blockers. */
+body.bn-video-home #main .bn-clean-video-hero::before {
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,31,36,.17),transparent 30%,transparent 77%,rgba(4,33,36,.12));
+}
+body.bn-video-home #main .bn-clean-video-hero::after {
+  content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:radial-gradient(ellipse 290px 290px at var(--bn-mouse-x) var(--bn-mouse-y),rgba(184,245,231,.19),transparent 69%);
+  opacity:var(--bn-wave-strength);
+  transition:opacity .55s ease;
+  mix-blend-mode:screen;
+}
+@media (max-width:900px) {
+  body.bn-video-home > .bn-approved-header.bn2-header {top:8px!important;width:calc(100% - 28px)!important}
+}
+@media (max-width:600px) {
+  body.bn-video-home #main .bn-clean-video-hero {min-height:0!important;height:100svh!important}
+  body.bn-video-home #main .bn-clean-video-hero::after{display:none}
+}
+@media (prefers-reduced-motion:reduce) {
+  body.bn-video-home #main .bn-clean-video-hero::after{display:none!important}
+  body.bn-video-home #main .bn-clean-video-hero .bn-clean-video,
+  body.bn-video-home #main .bn-clean-video-hero .bn-clean-video-poster img{filter:none!important;transform:none!important}
+}
+
+/* Interactive liquid trail, homepage only. Native cursor and all clicks stay intact. */
+body.bn-video-home .bn-liquid-cursor{position:fixed;left:0;top:0;width:42px;height:42px;border-radius:50%;z-index:1090;pointer-events:none;opacity:0;will-change:transform;transform:translate3d(-150px,-150px,0) translate(-50%,-50%);background:radial-gradient(circle at 37% 32%,rgba(240,255,252,.44),rgba(104,226,199,.19) 33%,rgba(19,128,115,.09) 66%,transparent 75%);border:1px solid rgba(123,218,199,.34);box-shadow:0 3px 20px rgba(13,111,101,.14),inset 0 0 13px rgba(240,255,255,.19);mix-blend-mode:normal;transition:opacity .25s,width .26s,height .26s,border-color .26s,background .26s;}
+body.bn-video-home .bn-liquid-cursor.is-visible{opacity:.85}
+body.bn-video-home .bn-liquid-cursor.is-active{width:68px;height:68px;border-color:rgba(31,139,119,.38);background:radial-gradient(circle,rgba(116,233,207,.16),rgba(20,122,105,.08) 65%,transparent 75%)}
+body.bn-video-home .bn-liquid-dot{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;z-index:1089;pointer-events:none;opacity:0;will-change:transform;background:rgba(33,169,142,.29);filter:blur(1px);transform:translate3d(-150px,-150px,0) translate(-50%,-50%);transition:opacity .25s}
+body.bn-video-home .bn-liquid-dot.is-visible{opacity:.6}
+body.bn-video-home .bn-liquid-dot:nth-of-type(2){width:8px;height:8px;opacity:.4}
+body.bn-video-home .bn-click-ripple{position:fixed;width:14px;height:14px;left:0;top:0;border-radius:50%;pointer-events:none;z-index:1088;border:1px solid rgba(12,141,116,.46);background:rgba(59,193,167,.07);transform:translate(-50%,-50%) scale(.25);animation:bn-click-spread .66s ease-out forwards}
+@keyframes bn-click-spread{0%{opacity:.9;transform:translate(-50%,-50%) scale(.25)}100%{opacity:0;transform:translate(-50%,-50%) scale(7)}}
+body.bn-video-home #main .bn-liquid-hover{--bn-glow-x:50%;--bn-glow-y:50%;position:relative}
+body.bn-video-home #main .bn-liquid-hover::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(220px circle at var(--bn-glow-x) var(--bn-glow-y),rgba(92,214,189,.14),transparent 73%);opacity:0;transition:opacity .23s;z-index:1}
+body.bn-video-home #main .bn-liquid-hover:hover::after{opacity:1}
+@media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){body.bn-video-home .bn-liquid-cursor,body.bn-video-home .bn-liquid-dot,body.bn-video-home .bn-click-ripple{display:none!important}body.bn-video-home #main .bn-liquid-hover::after{display:none!important}}

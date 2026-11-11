@@ -1,0 +1,48 @@
+/* Home-only surgical enhancement. No header/nav/footer/admin styles. */
+#main .bn-clean-video-hero .bn-clean-video {
+  filter:blur(1.35px) saturate(.94);transform:scale(1.014);transform-origin:center;
+}
+#main .bn-how-section{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(155deg,#f5faf8 0%,#eaf5f0 100%);padding-block:clamp(50px,6vw,90px)}
+#main .bn-how-section::before{content:"";pointer-events:none;position:absolute;inset:0;background:radial-gradient(circle at 85% 8%,#b9e9da58,transparent 40%)}
+#main .bn-how-section>.va-wrap{position:relative;z-index:1}
+#main .bn-how-intro{max-width:750px;margin-bottom:clamp(25px,3vw,42px)}
+#main .bn-how-intro .va-kicker{color:#11665d;font-size:.72rem;letter-spacing:.15em;font-weight:800}
+#main .bn-how-intro h2{color:#103c3d;margin:12px 0 14px;line-height:1.16;letter-spacing:-.035em;font-size:clamp(1.55rem,2.4vw,2.4vw);font-weight:750}
+#main .bn-how-intro h2 em{font-style:normal;color:#148275}
+#main .bn-how-intro>p{max-width:62ch;margin:0;color:#4e6965;line-height:1.75;font-size:clamp(.92rem,1.05vw,1.06rem)}
+#main .bn-how-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:clamp(12px,1.35vw,20px)!important;list-style:none;margin:0;padding:0!important;align-items:stretch}
+#main .bn-how-card{--pointer-x:50%;--pointer-y:35%;position:relative;isolation:isolate;display:flex;flex-direction:column;min-width:0;min-height:308px;padding:clamp(18px,1.55vw,26px)!important;overflow:hidden;border-radius:19px!important;border:1px solid #d6e8df!important;background:#fff!important;box-shadow:0 8px 25px #0b42350e!important;color:#193d3d;transition:transform .34s cubic-bezier(.21,.8,.26,1),box-shadow .34s,border-color .34s}
+#main .bn-how-card::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(260px circle at var(--pointer-x) var(--pointer-y),color-mix(in srgb,var(--step-accent) 20%,transparent),transparent 78%);opacity:0;transition:opacity .28s}
+#main .bn-how-card::after{content:"";position:absolute;top:0;left:20px;right:20px;height:3px;border-radius:0 0 10px 10px;background:var(--step-accent)}
+#main .bn-how-card:hover{transform:translateY(-9px);border-color:#9acdc0!important;box-shadow:0 23px 44px #0b42352b!important}
+#main .bn-how-card:hover::before{opacity:1}
+#main .bn-how-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:25px}
+#main .bn-how-card-top .bn-how-num{margin:0;color:#146f65;font-size:.76rem;font-weight:850;letter-spacing:.09em}
+#main .bn-how-stage{color:#70847c;font-weight:800;font-size:.65rem;letter-spacing:.1em}
+#main .bn-how-glyph{display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:color-mix(in srgb,var(--step-accent) 14%,white);border:1px solid color-mix(in srgb,var(--step-accent) 34%,white);color:#16594f;margin-bottom:22px;transition:transform .35s,background .35s}
+#main .bn-how-glyph-icon{font-size:2rem;line-height:1;font-weight:450}
+#main .bn-how-card:hover .bn-how-glyph{transform:translateY(-3px) rotate(-5deg);background:color-mix(in srgb,var(--step-accent) 23%,white)}
+#main .bn-how-card h3{margin:0 0 11px!important;font-size:clamp(1rem,1.1vw,1.15rem)!important;color:#153f3c!important;line-height:1.35;font-weight:800;letter-spacing:-.02em}
+#main .bn-how-card p{font-size:.85rem;line-height:1.68;margin:0 0 22px!important;color:#5b736e!important;max-width:unset;flex:1;font-weight:400}
+#main .bn-how-card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e4eee9;font-size:.69rem;font-weight:750;color:#30766d}
+#main .bn-how-card-foot span:last-child{font-size:1rem;transition:transform .25s}
+#main .bn-how-card:hover .bn-how-card-foot span:last-child{transform:translate(3px,-3px)}
+/* Reveal works for both scroll directions; JS toggles visibility rather than unobserving. */
+@media(prefers-reduced-motion:no-preference){
+  #main.bn-home-motion-ready [data-bn-home-reveal]{opacity:0;transform:translateY(32px);transition:opacity .72s ease,transform .72s cubic-bezier(.2,.75,.22,1);transition-delay:var(--bn-delay,0ms)}
+  #main.bn-home-motion-ready [data-bn-home-reveal].bn-home-inview{opacity:1;transform:translateY(0)}
+  #main.bn-home-motion-ready .bn-how-card.bn-home-inview:hover{transform:translateY(-9px)}
+  #main.bn-home-motion-ready [data-bn-home-reveal]:not(.bn-home-inview){transition-delay:0ms}
+}
+@media(max-width:1100px){#main .bn-how-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#main .bn-how-card{min-height:275px}}
+@media(max-width:640px){#main .bn-how-grid{grid-template-columns:1fr!important;gap:14px!important}#main .bn-how-card{min-height:0;padding:20px!important}#main .bn-how-card-top{margin-bottom:15px}#main .bn-how-glyph{width:51px;height:51px;margin-bottom:17px}#main .bn-how-card p{margin-bottom:20px!important}}
+@media(prefers-reduced-motion:reduce){#main .bn-how-card,#main .bn-how-glyph{transition:none!important}#main .bn-how-card:hover{transform:none}}
+@media(hover:none){#main .bn-how-card::before{display:none}#main .bn-how-card:hover{transform:none}}
+
+/* Existing homepage image/cards also get restrained hover feedback; keep layout unchanged. */
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  #main .bn-home-connection .va-art{transition:transform .55s cubic-bezier(.2,.8,.25,1),box-shadow .55s;transform-origin:center}
+  #main .bn-home-connection .va-art:hover{transform:scale(1.025);box-shadow:0 22px 50px #0b484126}
+  #main .bn-home-followup .va-button,#main .va-final-cta .va-button{transition:transform .25s,box-shadow .25s}
+  #main .bn-home-followup .va-button:hover,#main .va-final-cta .va-button:hover{transform:translateY(-3px);box-shadow:0 12px 26px #09483f2b}
+}

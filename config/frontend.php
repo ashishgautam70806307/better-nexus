@@ -1,40 +1,7 @@
 <?php
 
 return [
-    'services' => [
-        'administrative-tasks' => [
-            'title' => 'Administrative Support',
-            'view' => 'frontend.pages.services.administrative-tasks',
-        ],
-        'creative-services' => [
-            'title' => 'Creative & Design',
-            'view' => 'frontend.pages.services.creative-services',
-        ],
-        'customer-support-and-experience' => [
-            'title' => 'Customer Experience',
-            'view' => 'frontend.pages.services.customer-support-and-experience',
-        ],
-        'digital-marketing-services' => [
-            'title' => 'Digital Marketing',
-            'view' => 'frontend.pages.services.digital-marketing-services',
-        ],
-        'engineering-services' => [
-            'title' => 'Engineering Support',
-            'view' => 'frontend.pages.services.engineering-services',
-        ],
-        'finance-and-accounting' => [
-            'title' => 'Finance & Accounting',
-            'view' => 'frontend.pages.services.finance-and-accounting',
-        ],
-        'software-and-app-development' => [
-            'title' => 'Software & Apps',
-            'view' => 'frontend.pages.services.software-and-app-development',
-        ],
-        'website-revamp-and-optimization' => [
-            'title' => 'Website & Optimization',
-            'view' => 'frontend.pages.services.website-revamp-and-optimization',
-        ],
-    ],
+    'services' => require __DIR__.'/virtual-assistant.php',
     'blogs' => [
         '100-gdpr-compliance-78-fewer-crashes-for-a-legal-tech-platform' => [
             'title' => '100% GDPR Compliance & 78% Fewer Crashes for a Legal Tech Platform',
